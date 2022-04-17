@@ -67,6 +67,21 @@ function iboNavigation(activePage) {
     }
 }
 
+function swasthyaIboNavigation(activePage) {
+    var user = sessionStorage.getItem("userType");
+    $('nav:not([aria-label="breadcrumb"])').html('<div class="container"> \
+    <h5 style="color:white">Swasthya</h5> \
+        <ul id="portalNavbar"> \
+            <li><a href="../viewcustomers.html" id="customers"><i class="fas fa-users"></i> Customers</a></li> \<li><a href="../iboprofileupdate.html" id="patientRegistration"><i class="fas fas fa-user-alt"></i> Profile</a></li> \<li><a href="https://c0hcv782.caspio.com/folderlogout" id="patientRegistration"><i class="fas fa-users"></i> Logout</a></li> \
+        </ul> \
+    </div> \
+    ');
+
+    if (activePage) {
+        $('#' + activePage).addClass('active');
+    }
+}
+
 function loginNavigationIBO(activePage) {
     $('nav:not([aria-label="breadcrumb"])').html('<div class="container"> \
     <a href="./index.html" id="siteTitle"><h5>Dashboard</h5></a> \

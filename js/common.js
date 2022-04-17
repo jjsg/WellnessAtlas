@@ -72,7 +72,7 @@ function swasthyaIboNavigation(activePage) {
     $('nav:not([aria-label="breadcrumb"])').html('<div class="container"> \
     <h5 style="color:white">Swasthya</h5> \
         <ul id="portalNavbar"> \
-            <li><a href="../viewcustomers.html" id="customers"><i class="fas fa-users"></i> Customers</a></li> \<li><a href="../iboprofileupdate.html" id="patientRegistration"><i class="fas fas fa-user-alt"></i> Profile</a></li> \<li><a href="https://c0hcv782.caspio.com/folderlogout" id="patientRegistration"><i class="fas fa-users"></i> Logout</a></li> \
+            <li><a href="../viewcustomers.html" id="customers"><i class="fas fa-users"></i> Customers</a></li> \<li><a href="../iboprofileupdate.html" id="patientRegistration"><i class="fas fas fa-user-alt"></i> Profile</a></li> \<li><a href="https://c1dce987.caspio.com/folderlogout" id="patientRegistration"><i class="fas fa-users"></i> Logout</a></li> \
         </ul> \
     </div> \
     ');

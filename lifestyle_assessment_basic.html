@@ -54,7 +54,13 @@ function googleTranslateElementInit() {
     <script src="./js/all.js"></script>
     <script src="./js/common.js"></script>
     <script>
-        swasthyaIboNavigation('customers');
+        const params = new URLSearchParams(document.location.search);
+        const s = params.get("type");
+        if (s=="ibo") {
+            swasthyaIboNavigation('customers');
+        } else {
+            swasthyaCustomerNavigation();
+        }
     </script>
 </body>
 </html>

@@ -46,11 +46,7 @@
     <script>
          const params = new URLSearchParams(document.location.search);
         const s = params.get("type");
-        if (s=="ibo") {
-            swasthyaIboNavigation('customers');
-        } else {
-            swasthyaCustomerNavigation();
-        }
+        swasthyaIboNavigation();
     </script>
 </body>
 </html>

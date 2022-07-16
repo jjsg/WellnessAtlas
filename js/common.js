@@ -69,7 +69,18 @@ function iboNavigation(activePage) {
 
 function swasthyaIboNavigation(activePage) {
     var user = sessionStorage.getItem("userType");
-    if (user =='ibo') {
+    if (user =='platinum') {
+        $('nav:not([aria-label="breadcrumb"])').html('<div class="container"> \
+        <h5 style="color:white">Swasthya</h5> \
+            <ul id="portalNavbar"> \
+                <li><a href="../platinum/platinumdashboard.html" id="dashboard"><i class="fas fa-users"></i> Dashboard</a></li> \
+                <li><a href="../viewcustomers.html" id="customers"><i class="fas fa-users"></i> Customers</a></li> \
+                <li><a href="../iboprofileupdate.html" id="patientRegistration"><i class="fas fas fa-user-alt"></i> Profile</a></li> \
+                <li><a href="https://c1dce987.caspio.com/folderlogout" id="patientRegistration"><i class="fas fa-users"></i> Logout</a></li> \
+            </ul> \
+        </div> \
+        ');
+    } else if(user == "ibo") {
         $('nav:not([aria-label="breadcrumb"])').html('<div class="container"> \
         <h5 style="color:white">Swasthya</h5> \
             <ul id="portalNavbar"> \
@@ -83,11 +94,6 @@ function swasthyaIboNavigation(activePage) {
     } else {
         $('nav:not([aria-label="breadcrumb"])').html('<div class="container"> \
         <h5 style="color:white">Swasthya</h5> \
-            <ul id="portalNavbar"> \
-                <li><a href="../viewcustomers.html" id="customers"><i class="fas fa-users"></i> Customers</a></li> \
-                <li><a href="../iboprofileupdate.html" id="patientRegistration"><i class="fas fas fa-user-alt"></i> Profile</a></li> \
-                <li><a href="https://c1dce987.caspio.com/folderlogout" id="patientRegistration"><i class="fas fa-users"></i> Logout</a></li> \
-            </ul> \
         </div> \
         ');
     }
@@ -95,13 +101,6 @@ function swasthyaIboNavigation(activePage) {
     if (activePage) {
         $('#' + activePage).addClass('active');
     }
-}
-
-function swasthyaCustomerNavigation() {
-    $('nav:not([aria-label="breadcrumb"])').html('<div class="container" style="height:50px"> \
-    <h5 style="color:white">Swasthya</h5> \
-    </div> \
-    ');
 }
 
 function loginNavigationIBO(activePage) {

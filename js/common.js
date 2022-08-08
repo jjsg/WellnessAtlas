@@ -78,6 +78,7 @@ function swasthyaIboNavigation(activePage) {
                 <li><a href="../iboprofileupdate.html" id="patientRegistration"><i class="fas fas fa-user-alt"></i> Profile</a></li> \
                 <li><a href="https://c1dce987.caspio.com/folderlogout" id="patientRegistration"><i class="fas fa-users"></i> Logout</a></li> \
             </ul> \
+            <button type="button" class="btn btn-sm navbar-toggler" id="navbarToggle"><span class="navbar-toggler-icon"></span></button> \
         </div> \
         ');
     } else if(user == "ibo") {
@@ -89,6 +90,7 @@ function swasthyaIboNavigation(activePage) {
                 <li><a href="../iboprofileupdate.html" id="patientRegistration"><i class="fas fas fa-user-alt"></i> Profile</a></li> \
                 <li><a href="https://c1dce987.caspio.com/folderlogout" id="patientRegistration"><i class="fas fa-users"></i> Logout</a></li> \
             </ul> \
+            <button type="button" class="btn btn-sm navbar-toggler" id="navbarToggle"><span class="navbar-toggler-icon"></span></button> \
         </div> \
         ');
     } else {

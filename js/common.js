@@ -102,6 +102,26 @@ function swasthyaIboNavigation(activePage) {
         ');
     }
 
+    if (activePage == "customers") {
+        var custId = sessionStorage.getItem("customerID");
+        $(".stepper-wrapper").eq(0).html('<div class="stepper-item completed">\
+                  <div class="step-counter"><a id="stage-1" href="./customerdetails.html?custid='+custId+'">1</a></div>\
+                  <div class="step-name">Contact Details</div>\
+                </div>\
+                <div class="stepper-item ">\
+                  <div class="step-counter"><a id="stage-2" href="./customerdetails2.html?custrefid='+custId+'">2</a></div>\
+                  <div class="step-name">Lifestyle Assessment</div>\
+                </div>\
+                <div class="stepper-item ">\
+                  <div class="step-counter"><a id="stage-3" href="./productorderlist.html?custid='+custId+'">3</a></div>\
+                  <div class="step-name">Product Order List</div>\
+                </div>\
+                <div class="stepper-item ">\
+                  <div class="step-counter"><a id="stage-4" href="./interactionlist.html?custid='+custId+'">4</a></div>\
+                  <div class="step-name">Interaction List</div>\
+                </div>')
+    }
+
     if (activePage) {
         $('#' + activePage).addClass('active');
     }

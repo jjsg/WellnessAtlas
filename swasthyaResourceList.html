@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -16,11 +17,15 @@
     <div class="d-flex align-items-center">
       </div>
         <div class="col-md-12">
-            <h3 class="header-title">Add WQ Program</h3>
+            <div class="stepper-wrapper">
+                
+            </div>
+            
+            <h3 id="header-title" class="header-title">Resources List</h3>
             <div class="card">
                 <div class="card-body">
                     <div class="overflow-auto patient-registration">
-                        <script type="text/javascript" src="https://c0hcv782.caspio.com/dp/fea3a0009f7384b961774088b07a/emb"></script>
+                        <script type="text/javascript" src="https://c1dce987.caspio.com/dp/2edda000d7e770d3779046659bcf/emb"></script>
                     </div>
                 </div>
             </div>
@@ -32,7 +37,10 @@
     <script src="./js/all.js"></script>
     <script src="./js/common.js"></script>
     <script>
-        iboNavigation('patientRegistration');
+        //value is set in storage in html script written in customer basic details update datapage
+        var custName = sessionStorage.getItem("customerName");
+        document.getElementById("header-title").innerHTML = "Resources List - " + custName;
+        swasthyaIboNavigation('customers');
     </script>
 </body>
 </html>

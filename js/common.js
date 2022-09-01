@@ -119,6 +119,10 @@ function swasthyaIboNavigation(activePage) {
                 <div class="stepper-item ">\
                   <div class="step-counter"><a id="stage-4" href="./interactionlist.html?custid='+custId+'">4</a></div>\
                   <div class="step-name">Interaction List</div>\
+                </div>\
+                <div class="stepper-item ">\
+                  <div class="step-counter"><a id="stage-5" href="./swasthyaResourceList.html?custid='+custId+'">5</a></div>\
+                  <div class="step-name">Resource List</div>\
                 </div>')
     }
 

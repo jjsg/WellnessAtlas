@@ -2,7 +2,7 @@ function publicNavigation(activePage) {
     $('nav:not([aria-label="breadcrumb"])').html('<div class="container"> \
     <a href="./index.html" id="siteTitle"><h5>IBO Dashboard</h5></a> \
         <ul id="portalNavbar"> \
-            <li><a href="./ibodashboard.html" id="dashboard"><i class="fas fa-users"></i> Dashboard</a></li> \ <li><a href="../viewcustomers.html" id="customers"><i class="fas fa-users"></i> Customers</a></li> \<li><a href="../iboprofileupdate.html" id="patientRegistration"><i class="fas fas fa-user-alt"></i> Profile</a></li> \<li><a href="../productslinkscode.html" id="patientRegistration"><i class="fas fas fa-user-alt"></i> Resources</a></li> \<li><a href="https://c0hcv782.caspio.com/folderlogout" id="patientRegistration"><i class="fas fa-users"></i> Logout</a></li> \
+            <li><a href="./ibodashboard.html" id="dashboard"><i class="fas fa-users"></i> Dashboard</a></li> \ <li><a href="../viewcustomers.html" id="customers"><i class="fas fa-users"></i> Customers</a></li> \<li><a href="../iboprofileupdate.html" id="patientRegistration"><i class="fas fas fa-user-alt"></i> Profile</a></li> \<li><a href="https://c0hcv782.caspio.com/folderlogout" id="patientRegistration"><i class="fas fa-users"></i> Logout</a></li> \
         </ul> \
     <button type="button" class="btn btn-sm navbar-toggler" id="navbarToggle"><span class="navbar-toggler-icon"></span></button>  \
     </div> \
@@ -19,7 +19,7 @@ function platinumNavigation(activePage) {
 		 $('nav:not([aria-label="breadcrumb"])').html('<div class="container"> \
 		<a href="./platinumdashboard.html" id="siteTitle"><h5>Platinum Dashboard</h5></a> \
 			<ul id="portalNavbar"> \
-				<li><a href="./platinumdashboard.html" id="dashboard"><i class="fas fa-users"></i> Dashboard</a></li> \<li><a href="../viewcustomers.html" id="customers"><i class="fas fa-users"></i> Customers</a></li> \<li><a href="../iboprofileupdate.html" id="patientRegistration"><i class="fas fas fa-user-alt"></i> Profile</a></li>\<li><a href="../platinum/leadmanagement.html" id="patientRegistration"><i class="fas fas fa-user-alt"></i>Leads</a></li> \<li><a href="../productslinkscode.html" id="patientRegistration"><i class="fas fas fa-user-alt"></i> Resources</a></li> \<li><a href="https://c0hcv782.caspio.com/folderlogout" id="patientRegistration"><i class="fas fa-users"></i> Logout</a></li> \
+				<li><a href="./platinumdashboard.html" id="dashboard"><i class="fas fa-users"></i> Dashboard</a></li> \<li><a href="../viewcustomers.html" id="customers"><i class="fas fa-users"></i> Customers</a></li> \<li><a href="../iboprofileupdate.html" id="patientRegistration"><i class="fas fas fa-user-alt"></i> Profile</a></li>\<li><a href="../platinum/leadmanagement.html" id="patientRegistration"><i class="fas fas fa-user-alt"></i>Lead Management</a></li>\<li><a href="https://c0hcv782.caspio.com/folderlogout" id="patientRegistration"><i class="fas fa-users"></i> Logout</a></li> \
 			</ul> \
 		<button type="button" class="btn btn-sm navbar-toggler" id="navbarToggle"><span class="navbar-toggler-icon"></span></button>  \
 		</div> \
@@ -29,7 +29,7 @@ function platinumNavigation(activePage) {
 		 $('nav:not([aria-label="breadcrumb"])').html('<div class="container"> \
     <a href="./platinumdashboard.html" id="siteTitle"><h5>Platinum Dashboard</h5></a> \
         <ul id="portalNavbar"> \
-            <li><a href="../ibo/ibodashboard.html" id="dashboard"><i class="fas fa-users"></i> Dashboard</a></li> \ <li><a href="../viewcustomers.html" id="customers"><i class="fas fa-users"></i> Customers</a></li> \<li><a href="../iboprofileupdate.html" id="patientRegistration"><i class="fas fas fa-user-alt"></i> Profile</a></li>\<li><a href="../leads.html" id="patientRegistration"><i class="fas fas fa-user-alt"></i>Leads</a></li> \<li><a href="../productslinkscode.html" id="patientRegistration"><i class="fas fas fa-user-alt"></i> Resources</a></li> \<li><a href="https://c0hcv782.caspio.com/folderlogout" id="patientRegistration"><i class="fas fa-users"></i> Logout</a></li> \
+            <li><a href="../ibo/ibodashboard.html" id="dashboard"><i class="fas fa-users"></i> Dashboard</a></li>\<li><a href="../viewcustomers.html" id="customers"><i class="fas fa-users"></i> Customers</a> </li> \<li><a href="../iboprofileupdate.html" id="patientRegistration"><i class="fas fas fa-user-alt"></i> Profile</a></li>\<li><a href="../leads.html" id="patientRegistration"><i class="fas fas fa-user-alt"></i>Leads</a></li>\<li><a href="https://c0hcv782.caspio.com/folderlogout" id="patientRegistration"><i class="fas fa-users"></i> Logout</a></li> \
         </ul> \
     <button type="button" class="btn btn-sm navbar-toggler" id="navbarToggle"><span class="navbar-toggler-icon"></span></button>  \
     </div> \
@@ -46,7 +46,7 @@ function iboNavigation(activePage) {
     $('nav:not([aria-label="breadcrumb"])').html('<div class="container"> \
     <a href="./index.html" id="siteTitle"><h5>Platinum Dashboard</h5></a> \
         <ul id="portalNavbar"> \
-        <li><a href="./platinumdashboard.html" id="dashboard"><i class="fas fa-users"></i> Dashboard</a></li> \<li><a href="../viewcustomers.html" id="customers"><i class="fas fa-users"></i> Customers</a></li> \<li><a href="../iboprofileupdate.html" id="patientRegistration"><i class="fas fas fa-user-alt"></i> Profile</a></li>\<li><a href="../platinum/leadmanagement.html" id="patientRegistration"><i class="fas fas fa-user-alt"></i>Leads</a></li> \<li><a href="../productslinkscode.html" id="patientRegistration"><i class="fas fas fa-user-alt"></i> Resources</a></li> \<li><a href="https://c0hcv782.caspio.com/folderlogout" id="patientRegistration"><i class="fas fa-users"></i> Logout</a></li> \
+        <li><a href="./platinumdashboard.html" id="dashboard"><i class="fas fa-users"></i> Dashboard</a></li> \<li><a href="../viewcustomers.html" id="customers"><i class="fas fa-users"></i> Customers</a></li> \<li><a href="../iboprofileupdate.html" id="patientRegistration"><i class="fas fas fa-user-alt"></i> Profile</a></li>\<li><a href="../platinum/leadmanagement.html" id="patientRegistration"><i class="fas fas fa-user-alt"></i>Leads</a></li> \<li><a href="https://c0hcv782.caspio.com/folderlogout" id="patientRegistration"><i class="fas fa-users"></i> Logout</a></li> \
         </ul> \
     <button type="button" class="btn btn-sm navbar-toggler" id="navbarToggle"><span class="navbar-toggler-icon"></span></button>  \
     </div> \
@@ -55,7 +55,7 @@ function iboNavigation(activePage) {
           $('nav:not([aria-label="breadcrumb"])').html('<div class="container"> \
     <a href="./index.html" id="siteTitle"><h5>IBO Dashboard</h5></a> \
         <ul id="portalNavbar"> \
-            <li><a href="./ibo/ibodashboard.html" id="dashboard"><i class="fas fa-users"></i> Dashboard</a></li> \ <li><a href="../viewcustomers.html" id="customers"><i class="fas fa-users"></i> Customers</a></li> \<li><a href="../iboprofileupdate.html" id="patientRegistration"><i class="fas fas fa-user-alt"></i> Profile</a></li> \<li><a href="../productslinkscode.html" id="patientRegistration"><i class="fas fas fa-user-alt"></i> Resources</a></li> \<li><a href="https://c0hcv782.caspio.com/folderlogout" id="patientRegistration"><i class="fas fa-users"></i> Logout</a></li> \
+            <li><a href="./ibo/ibodashboard.html" id="dashboard"><i class="fas fa-users"></i> Dashboard</a></li> \ <li><a href="../viewcustomers.html" id="customers"><i class="fas fa-users"></i> Customers</a></li> \<li><a href="../iboprofileupdate.html" id="patientRegistration"><i class="fas fas fa-user-alt"></i> Profile</a></li> \ \<li><a href="https://c0hcv782.caspio.com/folderlogout" id="patientRegistration"><i class="fas fa-users"></i> Logout</a></li> \
         </ul> \
     <button type="button" class="btn btn-sm navbar-toggler" id="navbarToggle"><span class="navbar-toggler-icon"></span></button>  \
     </div> \
@@ -75,7 +75,6 @@ function swasthyaIboNavigation(activePage) {
             <ul id="portalNavbar"> \
                 <li><a href="../platinum/platinumdashboard.html" id="dashboard"><i class="fas fa-users"></i> Dashboard</a></li> \
                 <li><a href="../viewcustomers.html" id="customers"><i class="fas fa-users"></i> Customers</a></li> \
-                <li><a href="../productslinkscode.html" id="content"><i class="fas fa-users"></i> Resources</a></li> \
                 <li><a href="../platinum/leadmanagement.html" id="content"><i class="fas fa-users"></i>Lead Management</a></li> \
                 <li><a href="../publiccontent.html" id="content"><i class="fas fa-users"></i> Content</a></li> \
                 <li><a href="../iboprofileupdate.html" id="patientRegistration"><i class="fas fas fa-user-alt"></i> Profile</a></li> \
@@ -91,7 +90,6 @@ function swasthyaIboNavigation(activePage) {
                 <li><a href="../ibo/ibodashboard.html" id="dashboard"><i class="fas fa-users"></i> Dashboard</a></li> \
                 <li><a href="../viewcustomers.html" id="customers"><i class="fas fa-users"></i> Customers</a></li> \
                 <li><a href="../leads.html" id="content"><i class="fas fa-users"></i>Lead Management</a></li> \
-                <li><a href="../productslinkscode.html" id="content"><i class="fas fa-users"></i> Resources</a></li> \
                 <li><a href="../publiccontent.html" id="content"><i class="fas fa-users"></i> Content</a></li> \
                 <li><a href="../iboprofileupdate.html" id="patientRegistration"><i class="fas fas fa-user-alt"></i> Profile</a></li> \
                 <li><a href="https://c1dce987.caspio.com/folderlogout" id="patientRegistration"><i class="fas fa-users"></i> Logout</a></li> \

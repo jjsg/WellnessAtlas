@@ -133,11 +133,12 @@ function swasthyaIboNavigation(activePage) {
     }
 }
 
+
 function loginNavigationIBO(activePage) {
     $('nav:not([aria-label="breadcrumb"])').html('<div class="container"> \
     <a href="./index.html" id="siteTitle"><h5>Dashboard</h5></a> \
         <ul id="portalNavbar"> \
-            <li><a href="./registration.html" id="registration"><i class="fas fa-users"></i> Registration</a></li> \
+            <!--li><a href="./registration.html" id="registration"><i class="fas fa-users"></i> Registration</a></li--> \
         </ul> \
     <button type="button" class="btn btn-sm navbar-toggler" id="navbarToggle"><span class="navbar-toggler-icon"></span></button>  \
     </div> \

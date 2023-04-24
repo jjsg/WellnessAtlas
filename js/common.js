@@ -75,8 +75,8 @@ function swasthyaIboNavigation(activePage) {
             <ul id="portalNavbar"> \
                 <li><a href="../platinum/platinumdashboard.html" id="dashboard"><i class="fas fa-users"></i> Dashboard</a></li> \
                 <li><a href="../viewcustomers.html" id="customers"><i class="fas fa-users"></i> Customers</a></li> \
-                <li><a href="../platinum/leadmanagement.html" id="content"><i class="fas fa-users"></i>Lead Management</a></li> \
-                <li><a href="../swasthyaResourceList.html" id="content"><i class="fas fa-users"></i>Resources</a></li> \
+                <li><a href="../platinum/leadmanagement.html" id="leadmanagement"><i class="fas fa-users"></i>Lead Management</a></li> \
+                <li><a href="../swasthyaResourceList.html" id="resources"><i class="fas fa-users"></i>Resources</a></li> \
                 <li><a href="../publiccontent.html" id="content"><i class="fas fa-users"></i> Content</a></li> \
                 <li><a href="../iboprofileupdate.html" id="patientRegistration"><i class="fas fas fa-user-alt"></i> Profile</a></li> \
                 <li><a href="https://c0hcv782.caspio.com/folderlogout" id="patientRegistration"><i class="fas fa-users"></i> Logout</a></li> \
@@ -90,8 +90,8 @@ function swasthyaIboNavigation(activePage) {
             <ul id="portalNavbar"> \
                 <li><a href="../ibo/ibodashboard.html" id="dashboard"><i class="fas fa-users"></i> Dashboard</a></li> \
                 <li><a href="../viewcustomers.html" id="customers"><i class="fas fa-users"></i> Customers</a></li> \
-                <li><a href="../leads.html" id="content"><i class="fas fa-users"></i>Lead List</a></li> \
-                <li><a href="../swasthyaResourceList.html" id="content"><i class="fas fa-users"></i>Resources</a></li> \
+                <li><a href="../leads.html" id="leadlist"><i class="fas fa-users"></i>Lead List</a></li> \
+                <li><a href="../swasthyaResourceList.html" id="resources"><i class="fas fa-users"></i>Resources</a></li> \
                 <li><a href="../publiccontent.html" id="content"><i class="fas fa-users"></i> Content</a></li> \
                 <li><a href="../iboprofileupdate.html" id="patientRegistration"><i class="fas fas fa-user-alt"></i> Profile</a></li> \
                 <li><a href="https://c0hcv782.caspio.com/folderlogout" id="patientRegistration"><i class="fas fa-users"></i> Logout</a></li> \

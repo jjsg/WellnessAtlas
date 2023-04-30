@@ -2,7 +2,7 @@ function publicNavigation(activePage) {
     $('nav:not([aria-label="breadcrumb"])').html('<div class="container"> \
     <a href="./index.html" id="siteTitle"><h5>IBO Dashboard</h5></a> \
         <ul id="portalNavbar"> \
-            <li><a href="./ibodashboard.html" id="dashboard"><i class="fas fa-users"></i> Dashboard</a></li> \ <li><a href="../viewcustomers.html" id="customers"><i class="fas fa-users"></i> Customers</a></li> \<li><a href="../iboprofileupdate.html" id="patientRegistration"><i class="fas fas fa-user-alt"></i> Profile</a></li> \<li><a href="https://c0hcv782.caspio.com/folderlogout" id="patientRegistration"><i class="fas fa-users"></i> Logout</a></li> \
+            <li><a href="./ibodashboard.html" id="dashboard"><i class="fas fa-users"></i> Dashboard</a></li> \<li><a href="../viewcustomers.html" id="customers"><i class="fas fa-users"></i> Customers</a></li> \<li><a href="../iboprofileupdate.html" id="patientRegistration"><i class="fas fas fa-user-alt"></i> Profile</a></li> \<li><a href="https://c0hcv782.caspio.com/folderlogout" id="patientRegistration"><i class="fas fa-users"></i> Logout</a></li> \
         </ul> \
     <button type="button" class="btn btn-sm navbar-toggler" id="navbarToggle"><span class="navbar-toggler-icon"></span></button>  \
     </div> \
@@ -55,7 +55,7 @@ function iboNavigation(activePage) {
           $('nav:not([aria-label="breadcrumb"])').html('<div class="container"> \
     <a href="./index.html" id="siteTitle"><h5>IBO Dashboard</h5></a> \
         <ul id="portalNavbar"> \
-            <li><a href="./ibo/ibodashboard.html" id="dashboard"><i class="fas fa-users"></i> Dashboard</a></li> \ <li><a href="../viewcustomers.html" id="customers"><i class="fas fa-users"></i> Customers</a></li> \<li><a href="../iboprofileupdate.html" id="patientRegistration"><i class="fas fas fa-user-alt"></i> Profile</a></li> \ \<li><a href="https://c0hcv782.caspio.com/folderlogout" id="patientRegistration"><i class="fas fa-users"></i> Logout</a></li> \
+            <li><a href="./ibo/ibodashboard.html" id="dashboard"><i class="fas fa-users"></i> Dashboard</a></li> \ <<li><a href="./courseresalesport.html" id="courses"><i class="fas fa-users"></i> Engage</a></li> \li><a href="../viewcustomers.html" id="customers"><i class="fas fa-users"></i> Customers</a></li> \<li><a href="../iboprofileupdate.html" id="patientRegistration"><i class="fas fas fa-user-alt"></i> Profile</a></li> \ \<li><a href="https://c0hcv782.caspio.com/folderlogout" id="patientRegistration"><i class="fas fa-users"></i> Logout</a></li> \
         </ul> \
     <button type="button" class="btn btn-sm navbar-toggler" id="navbarToggle"><span class="navbar-toggler-icon"></span></button>  \
     </div> \
@@ -74,6 +74,7 @@ function swasthyaIboNavigation(activePage) {
         <h5 style="color:white">Swasthya</h5> \
             <ul id="portalNavbar"> \
                 <li><a href="../platinum/platinumdashboard.html" id="dashboard"><i class="fas fa-users"></i> Dashboard</a></li> \
+                <li><a href="../platinum/coursesalesreportPlatinum.html" id="courses"><i class="fas fa-users"></i> Engage</a></li> \
                 <li><a href="../viewcustomers.html" id="customers"><i class="fas fa-users"></i> Customers</a></li> \
                 <li><a href="../platinum/leadmanagement.html" id="leadmanagement"><i class="fas fa-users"></i>Lead Management</a></li> \
                 <li><a href="../swasthyaResourceList.html" id="resources"><i class="fas fa-users"></i>Resources</a></li> \
@@ -89,6 +90,7 @@ function swasthyaIboNavigation(activePage) {
         <h5 style="color:white">Swasthya</h5> \
             <ul id="portalNavbar"> \
                 <li><a href="../ibo/ibodashboard.html" id="dashboard"><i class="fas fa-users"></i> Dashboard</a></li> \
+                <li><a href="../ibo/coursesalesreport.html" id="courses"><i class="fas fa-users"></i> Engage</a></li> \
                 <li><a href="../viewcustomers.html" id="customers"><i class="fas fa-users"></i> Customers</a></li> \
                 <li><a href="../leads.html" id="leadlist"><i class="fas fa-users"></i>Lead List</a></li> \
                 <li><a href="../swasthyaResourceList.html" id="resources"><i class="fas fa-users"></i>Resources</a></li> \

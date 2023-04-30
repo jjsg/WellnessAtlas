@@ -76,9 +76,18 @@ function swasthyaIboNavigation(activePage) {
                 <li><a href="../platinum/platinumdashboard.html" id="dashboard"><i class="fas fa-users"></i> Dashboard</a></li> \
                 <li><a href="../platinum/coursesalesreportPlatinum.html" id="courses"><i class="fas fa-users"></i> Engage</a></li> \
                 <li><a href="../viewcustomers.html" id="customers"><i class="fas fa-users"></i> Customers</a></li> \
-                <li><a href="../platinum/leadmanagement.html" id="leadmanagement"><i class="fas fa-users"></i>Lead Management</a></li> \
-                <li><a href="../swasthyaResourceList.html" id="resources"><i class="fas fa-users"></i>Resources</a></li> \
+                <li><a href="../platinum/leadmanagement.html" id="leadmanagement"><i class="fas fa-users"></i> Lead Management</a></li> \
+                <li><a href="../swasthyaResourceList.html" id="resources"><i class="fas fa-users"></i> Resources</a></li> \
                 <li><a href="../publiccontent.html" id="content"><i class="fas fa-users"></i> Content</a></li> \
+                <li id="testimoniesmenu" class="nav-item dropdown"> \
+                    <a tabindex="0" class="nav-link dropdown-toggle" data-mdb-toggle="dropdown" aria-expanded="false" role="button" id="testimonies"><i class="fas fas fa-user-alt"></i> Social</a>\
+                    <ul id="testimoniesSubmenu" class="dropdown-menu">\
+                        <li><a class="dropdown-item" href="../social/testimonial.html" id="submitTestimonial"><i class="fas fa-users"></i> Submit Testimonal</a></li>\
+                        <li><a class="dropdown-item" href="../social/mytestimonial.html" id="myTestimonial"><i class="fas fa-users"></i> My Testimonial</a></li> \
+                        <li><a class="dropdown-item" href="../social/viewalltestimonial.html" id="viewTestimonial"><i class="fas fa-users"></i> View Testimonial</a></li> \
+                        <li><a class="dropdown-item" href="../social/approvetestimonials.html" id="approveTestimonial"><i class="fas fa-users"></i> Approve Testimonial</a></li> \
+                    </ul>\
+                </li> \
                 <li><a href="../iboprofileupdate.html" id="patientRegistration"><i class="fas fas fa-user-alt"></i> Profile</a></li> \
                 <li><a href="https://c0hcv782.caspio.com/folderlogout" id="patientRegistration"><i class="fas fa-users"></i> Logout</a></li> \
             </ul> \
@@ -95,6 +104,15 @@ function swasthyaIboNavigation(activePage) {
                 <li><a href="../leads.html" id="leadlist"><i class="fas fa-users"></i>Lead List</a></li> \
                 <li><a href="../swasthyaResourceList.html" id="resources"><i class="fas fa-users"></i>Resources</a></li> \
                 <li><a href="../publiccontent.html" id="content"><i class="fas fa-users"></i> Content</a></li> \
+                <li id="testimoniesmenu" class="nav-item dropdown"> \
+                    <a tabindex="0" class="nav-link dropdown-toggle" data-mdb-toggle="dropdown" aria-expanded="false" role="button" id="testimonies"><i class="fas fas fa-user-alt"></i> Social</a>\
+                    <ul id="testimoniesSubmenu" class="dropdown-menu">\
+                        <li><a class="dropdown-item" href="../social/testimonial.html" id="submitTestimonial"><i class="fas fa-users"></i> Submit Testimonal</a></li>\
+                        <li><a class="dropdown-item" href="../social/mytestimonial.html" id="myTestimonial"><i class="fas fa-users"></i> My Testimonial</a></li> \
+                        <li><a class="dropdown-item" href="../social/viewalltestimonial.html" id="viewTestimonial"><i class="fas fa-users"></i> View Testimonial</a></li> \
+                        <li><a class="dropdown-item" href="../social/approvetestimonials.html" id="approveTestimonial"><i class="fas fa-users"></i> Approve Testimonial</a></li> \
+                    </ul>\
+                </li> \
                 <li><a href="../iboprofileupdate.html" id="patientRegistration"><i class="fas fas fa-user-alt"></i> Profile</a></li> \
                 <li><a href="https://c0hcv782.caspio.com/folderlogout" id="patientRegistration"><i class="fas fa-users"></i> Logout</a></li> \
             </ul> \
@@ -263,6 +281,12 @@ var interval = setInterval(function() {
 
 $(window).on('resize', function(e) {
     $('ul#portalNavbar').removeClass('active');
+});
+
+$(document).ready(function() {
+    $('#testimoniesmenu').on('click', function() {
+        $('#testimoniesSubmenu').toggleClass('show');
+    });
 });
 
 function getUrlVars() {

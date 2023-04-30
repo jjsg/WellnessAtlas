@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Swasthya CRM</title>
-    <link rel="stylesheet" href="./css/bootstrap.min.css" />
-    <link rel="stylesheet" href="./css/all.css" />
-    <link rel="stylesheet" href="./css/common.css" />
-    <link rel="shortcut icon" type="image/x-icon" href="./img/index.ico">
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/all.css" />
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../img/index.ico">
 </head>
 <body>
     <nav class="navbar fixed-top navbar-light"></nav>
@@ -25,7 +25,6 @@
                   <script type="text/javascript" src="https://c0hcv782.caspio.com/dp/fea3a000b5aff786b72f4a5aae92/emb"></script>
                 </div>
             </div>
-            <div class="card">
               <div class="card-body">
                 <h3 class="header-title">Program Transactions Downline</h3>
                 <div class="overflow-auto patient-registration">
@@ -67,7 +66,8 @@
     <script src="./js/all.js"></script>
     <script src="./js/common.js"></script>
     <script>
-        swasthyaIboNavigation('courses');
+      sessionStorage.setItem("userType", "platinum");
+        swasthyaIboNavigation('customers');
     </script>
 </body>
 </html>

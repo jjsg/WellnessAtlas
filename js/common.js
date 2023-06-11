@@ -69,6 +69,7 @@ function iboNavigation(activePage) {
 
 function swasthyaIboNavigation(activePage) {
     var user = sessionStorage.getItem("userType");
+    var commID = sessionStorage.getItem("commid");
     if (user =='platinum') {
         $('nav:not([aria-label="breadcrumb"])').html('<div class="container"> \
         <h5 style="color:white">Swasthya</h5> \
@@ -76,9 +77,17 @@ function swasthyaIboNavigation(activePage) {
                 <li><a href="../platinum/platinumdashboard.html" id="dashboard"><i class="fas fa-users"></i> Dashboard</a></li> \
                 <li><a href="../platinum/coursesalesreportPlatinum.html" id="courses"><i class="fas fa-users"></i> Engage</a></li> \
                 <li><a href="../viewcustomers.html" id="customers"><i class="fas fa-users"></i> Customers</a></li> \
-                <li><a href="../platinum/leadmanagement.html" id="leadmanagement"><i class="fas fa-users"></i> Lead Management</a></li> \
+                <li id="leadmenu" class="nav-item dropdown"> \
+                    <a tabindex="0" class="nav-link dropdown-toggle" data-mdb-toggle="dropdown" aria-expanded="false" role="button" id="leadmanagement"><i class="fas fas fa-user-alt"></i> Lead Management</a>\
+                    <ul id="leadSubmenu" class="dropdown-menu">\
+                        <li><a class="dropdown-item" href="../leadmanagement/leads.html" id="communityLeads"><i class="fas fa-users"></i> Community Leads</a></li>\
+                        <li><a class="dropdown-item" href="../leadmanagement/leadmanagement.html" id="claimLeads"><i class="fas fa-users"></i> Claim Leads</a></li>\
+                        <li><a class="dropdown-item" href="../leadmanagement/personalleads.html" id="plleads"><i class="fas fa-users"></i> My Personal Leads</a></li>\
+                        <li><a class="dropdown-item" href="../leadmanagement/blindleads.html" id="blindleads"><i class="fas fa-users"></i> My Blind Leads</a></li>\
+                    </ul> \
+                </li> \
                 <li><a href="../swasthyaResourceList.html" id="resources"><i class="fas fa-users"></i> Resources</a></li> \
-                <li><a href="../publiccontent.html" id="content"><i class="fas fa-users"></i> Content</a></li> \
+                <!--li><a href="../publiccontent.html" id="content"><i class="fas fa-users"></i> Content</a></li--> \
                 <li id="testimoniesmenu" class="nav-item dropdown"> \
                     <a tabindex="0" class="nav-link dropdown-toggle" data-mdb-toggle="dropdown" aria-expanded="false" role="button" id="testimonies"><i class="fas fas fa-user-alt"></i> Social</a>\
                     <ul id="testimoniesSubmenu" class="dropdown-menu">\
@@ -101,9 +110,17 @@ function swasthyaIboNavigation(activePage) {
                 <li><a href="../ibo/ibodashboard.html" id="dashboard"><i class="fas fa-users"></i> Dashboard</a></li> \
                 <li><a href="../ibo/coursesalesreport.html" id="courses"><i class="fas fa-users"></i> Engage</a></li> \
                 <li><a href="../viewcustomers.html" id="customers"><i class="fas fa-users"></i> Customers</a></li> \
-                <li><a href="../leads.html" id="leadlist"><i class="fas fa-users"></i>Lead List</a></li> \
-                <li><a href="../swasthyaResourceList.html" id="resources"><i class="fas fa-users"></i>Resources</a></li> \
-                <li><a href="../publiccontent.html" id="content"><i class="fas fa-users"></i> Content</a></li> \
+                <li id="leadmenu" class="nav-item dropdown"> \
+                    <a tabindex="0" class="nav-link dropdown-toggle" data-mdb-toggle="dropdown" aria-expanded="false" role="button" id="leadmanagement"><i class="fas fas fa-user-alt"></i> Lead Management</a>\
+                    <ul id="leadSubmenu" class="dropdown-menu">\
+                        <li><a class="dropdown-item" href="../leadmanagement/leads.html" id="communityLeads"><i class="fas fa-users"></i> Community Leads</a></li>\
+                        <li><a class="dropdown-item" href="../leadmanagement/leadmanagement.html" id="claimLeads"><i class="fas fa-users"></i> Claim Leads</a></li>\
+                        <li><a class="dropdown-item" href="../leadmanagement/personalleads.html" id="plleads"><i class="fas fa-users"></i> My Personal Leads</a></li>\
+                        <li><a class="dropdown-item" href="../leadmanagement/blindleads.html" id="blindleads"><i class="fas fa-users"></i> My Blind Leads</a></li>\
+                    </ul> \
+                </li> \
+                <li><a href="../swasthyaResourceList.html" id="resources"><i class="fas fa-users"></i> Resources</a></li> \
+                <!--li><a href="../publiccontent.html" id="content"><i class="fas fa-users"></i> Content</a></li--> \
                 <li id="testimoniesmenu" class="nav-item dropdown"> \
                     <a tabindex="0" class="nav-link dropdown-toggle" data-mdb-toggle="dropdown" aria-expanded="false" role="button" id="testimonies"><i class="fas fas fa-user-alt"></i> Social</a>\
                     <ul id="testimoniesSubmenu" class="dropdown-menu">\
@@ -286,6 +303,12 @@ $(window).on('resize', function(e) {
 $(document).ready(function() {
     $('#testimoniesmenu').on('click', function() {
         $('#testimoniesSubmenu').toggleClass('show');
+    });
+});
+
+$(document).ready(function() {
+    $('#leadmenu').on('click', function() {
+        $('#leadSubmenu').toggleClass('show');
     });
 });
 

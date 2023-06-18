@@ -69,7 +69,7 @@ function iboNavigation(activePage) {
 
 function swasthyaIboNavigation(activePage) {
     var user = sessionStorage.getItem("userType");
-    var commID = sessionStorage.getItem("commid");
+    var commType = sessionStorage.getItem("commType");
     var commonHeader = '<div class="container"> \
         <h5 style="color:white">Swasthya</h5>'
 
@@ -86,7 +86,7 @@ function swasthyaIboNavigation(activePage) {
     }
 
     var communitySpecificTabs = '';
-    if (commID == '02THNX8Z') {
+    if (commType == 'HWL') {
         communitySpecificTabs = '<li><a href="../viewcustomers.html" id="customers_sw"><i class="fas fa-users"></i> Customers</a></li> \
                 <li id="leadmenu" class="nav-item dropdown"> \
                     <a tabindex="0" class="nav-link dropdown-toggle" data-mdb-toggle="dropdown" aria-expanded="false" role="button" id="leadmanagement"><i class="fas fas fa-user-alt"></i> Lead Management</a>\
@@ -98,7 +98,7 @@ function swasthyaIboNavigation(activePage) {
                     </ul> \
                 </li>'
         authorised = true;
-    } else if (commID == 'AJ19RUBN') {
+    } else if (commType == 'GENERIC') {
         communitySpecificTabs = '<li><a href="../viewcustomers_wq.html" id="customers_wq"><i class="fas fa-users"></i> Customers</a></li>'
         authorised = true;
     }

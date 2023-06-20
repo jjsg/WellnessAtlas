@@ -71,7 +71,7 @@ function swasthyaIboNavigation(activePage) {
     var user = sessionStorage.getItem("userType");
     var commType = sessionStorage.getItem("commType");
     var commonHeader = '<div class="container"> \
-        <h5 style="color:white">Swasthya</h5>'
+        <h5 style="color:white">Wellness Atlas</h5>'
 
     var dashboardReportTabs ='';
     var authorised = false;

@@ -107,7 +107,7 @@ function swasthyaIboNavigation(activePage) {
     var commonFooter = '</div>';
     if (authorised) {
         commonHeader = commonHeader + '<ul id="portalNavbar">';
-        commonTabs = '<li><a href="../swasthyaResourceList.html" id="resources"><i class="fas fa-users"></i> Resources</a></li> \
+        commonTabs = '<li><a href="../resourceList.html" id="resources"><i class="fas fa-users"></i> Resources</a></li> \
                 <li id="testimoniesmenu" class="nav-item dropdown"> \
                     <a tabindex="0" class="nav-link dropdown-toggle" data-mdb-toggle="dropdown" aria-expanded="false" role="button" id="testimonies"><i class="fas fas fa-user-alt"></i> Social</a>\
                     <ul id="testimoniesSubmenu" class="dropdown-menu">\
@@ -146,7 +146,7 @@ function swasthyaIboNavigation(activePage) {
                   <div class="step-name">Interaction List</div>\
                 </div>\
                 <div class="stepper-item ">\
-                  <div class="step-counter"><a id="stage-5" href="./swasthyaResourceList.html?custid='+custId+'">5</a></div>\
+                  <div class="step-counter"><a id="stage-5" href="./resourceList.html?custid='+custId+'">5</a></div>\
                   <div class="step-name">Resource List</div>\
                 </div>')
     }

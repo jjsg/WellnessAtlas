@@ -40,7 +40,12 @@
         //value is set in storage in html script written in customer basic details update datapage
         var custName = sessionStorage.getItem("customerName");
         document.getElementById("header-title").innerHTML = "Product Order List - " + custName;
-        swasthyaIboNavigation('customers_sw');
+        swasthyaIboNavigation('customers');
+        $("#step-1").removeClass("completed");
+        $("#step-2").removeClass("completed");
+        $("#step-3").addClass("completed");
+        $("#step-4").removeClass("completed");
+        $("#step-5").removeClass("completed");
     </script>
 </body>
 </html>

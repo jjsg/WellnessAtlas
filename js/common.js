@@ -127,32 +127,32 @@ function swasthyaIboNavigation(activePage) {
     $('nav:not([aria-label="breadcrumb"])').html(htmlString);
 
 
-    if (activePage == "customers_sw") {
+    if (activePage == "customers" && commType == "HWL") {
         var custId = sessionStorage.getItem("customerID");
-        $(".stepper-wrapper").eq(0).html('<div class="stepper-item completed">\
+        $(".stepper-wrapper").eq(0).html('<div id="step-1" class="stepper-item completed">\
                   <div class="step-counter"><a id="stage-1" href="./customerdetails.html?custid='+custId+'">1</a></div>\
                   <div class="step-name">Contact Details</div>\
                 </div>\
-                <div class="stepper-item ">\
+                <div  id="step-2" class="stepper-item ">\
                   <div class="step-counter"><a id="stage-2" href="./customerdetails2.html?custrefid='+custId+'">2</a></div>\
                   <div class="step-name">Lifestyle Assessment</div>\
                 </div>\
-                <div class="stepper-item ">\
+                <div id="step-3" class="stepper-item ">\
                   <div class="step-counter"><a id="stage-3" href="./productorderlist.html?custid='+custId+'">3</a></div>\
                   <div class="step-name">Old Product Order List</div>\
                 </div>\
-                <div class="stepper-item ">\
+                <div id="step-3" class="stepper-item ">\
                   <div class="step-counter"><a id="stage-3" href="./orderList.html?custid='+custId+'">3</a></div>\
                   <div class="step-name">New Order List</div>\
                 </div>\
-                <div class="stepper-item ">\
+                <div id="step-4" class="stepper-item ">\
                   <div class="step-counter"><a id="stage-4" href="./interactionlist.html?custid='+custId+'">4</a></div>\
                   <div class="step-name">Interaction List</div>\
                 </div>\
-                <div class="stepper-item ">\
+                <!--div id="step-5" class="stepper-item ">\
                   <div class="step-counter"><a id="stage-5" href="./resourceList.html?custid='+custId+'">5</a></div>\
                   <div class="step-name">Resource List</div>\
-                </div>')
+                </div-->')
     }
 
     if (activePage) {

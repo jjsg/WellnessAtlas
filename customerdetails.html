@@ -40,6 +40,11 @@
         var custName = sessionStorage.getItem("customerName");
         document.getElementById("header-title").innerHTML = "Basic Details - " + custName;
         swasthyaIboNavigation('customers');
+        $("#step-1").addClass("completed");
+        $("#step-2").removeClass("completed");
+        $("#step-3").removeClass("completed");
+        $("#step-4").removeClass("completed");
+        $("#step-5").removeClass("completed");
     </script>
 </body>
 </html>

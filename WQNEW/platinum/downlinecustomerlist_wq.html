@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!-- Coding by CodingNepal | www.codingnepalweb.com -->
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Program Tracking</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <!--<link rel="stylesheet" href="../css/all.css" />-->
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../img/index.ico">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <div class="sidebar close">
+        <div class="logo-details">
+            <img id="wellnessLogo" class="wellnessLogo" src="../img/wellness-atlas-logo.png">
+        </div>
+        <ul id="wqmenu" class="nav-links">
+        </ul>
+    </div>
+    <section class="home-section">
+        <div class="home-content">
+            <i class='bx bx-menu'></i>
+            <span class="text">Downline Customer List</span>
+        </div>
+
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+                <div id="collapseZero" class="accordion-collapse collapse show" aria-labelledby="headingZero" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+
+                        <script type="text/javascript" src="https://c0hcv782.caspio.com/dp/fea3a000a67050b615c346ce95b1/emb"></script>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+    </section>
+    <script src="../js/jquery-3.3.1.slim.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/all.js"></script>
+    <script src="../js/common.js"></script>
+    <script>
+        let arrow = document.querySelectorAll(".arrow");
+        for (var i = 0; i < arrow.length; i++) {
+            arrow[i].addEventListener("click", (e) => {
+                let arrowParent = e.target.parentElement.parentElement; //selecting main parent of arrow
+                arrowParent.classList.toggle("showMenu");
+            });
+        }
+        $(function() {
+
+            $(".bx-menu").click(function() {
+                $(".sidebar").toggleClass("close");
+                $("#wellnessLogo").toggleClass("wellnessLogo wellnessLogoSmall");
+            });
+            sessionStorage.setItem("userType", "platinum");
+            iboNavigation('Customers');
+            swasthyaIboNavigation('dashboard');
+        });
+    </script>
+</body>
+
+</html>

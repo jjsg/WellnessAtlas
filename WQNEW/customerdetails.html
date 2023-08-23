@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Program Tracking</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/all.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="./img/index.ico"/>
+</head>
+
+<body>
+    <nav class="navbar fixed-top navbar-light"></nav>
+    <main class="container">
+    <div class="d-flex align-items-center">
+      </div>
+        <div class="col-md-12">
+            <h3 class="header-title">Customer Details</h3>
+            <div class="card">
+                <div class="card-body">
+                    <div class="overflow-auto patient-registration">
+                        <script type="text/javascript" src="https://c0hcv782.caspio.com/dp/fea3a000e04b1ce606b64a528d68/emb"></script>
+                    </div><br><br>
+					<div class="overflow-auto patient-registration">
+                        <script type="text/javascript" src="https://c0hcv782.caspio.com/dp/fea3a00055c482f32bed4be7a763/emb"></script>
+                    </div><br><br>             
+					<div class="overflow-auto patient-registration">
+                        <script type="text/javascript" src="https://c0hcv782.caspio.com/dp/fea3a0003318ac2e6f104887afee/emb"></script>
+                    </div><br><br>					
+			   </div>
+            </div>
+        </div>
+    </main>
+    <script src="./js/jquery-3.3.1.slim.min.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/all.js"></script>
+    <script src="./js/common.js"></script>
+    <script>
+        iboNavigation('customers');
+        $(function() {
+        	 $(".cbFormData:contains(Yes)").addClass('textYES');
+             if ($('select[name=EditRecordcust_cmos2] option').filter(':selected').val() == ''){
+             	$('#EditRecordcust_cmos2').addClass('redBorderColour');
+             }
+     		if ($('select[name=EditRecordcust_cmos1] option').filter(':selected').val() == ''){
+     			$('#EditRecordcust_cmos1').addClass('redBorderColour');
+             }
+     		$('select').on('change', function () {
+     			  //ways to retrieve selected option and text outside handler
+     			  //console.log('Changed option value ' + this.value);
+     			  //console.log('Changed option text ' + $(this).find('option').filter(':selected').text());
+     			  if(this.value != ''){
+     				  $(this).removeClass('redBorderColour');
+     			  }
+     		});     		
+        });
+       
+    </script>
+</body>
+</html>

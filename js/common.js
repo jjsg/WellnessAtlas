@@ -74,34 +74,36 @@ function swasthyaIboNavigation(activePage) {
 
     var dashboardReportTabs = '';
     var authorised = false;
-    if (user == 'platinum') {
-        dashboardReportTabs = '<li><a href="../platinum/platinumdashboard.html" id="dashboard"><i class="fas fa-users"></i> Dashboard</a></li> \
-                <li><a href="../platinum/coursesalesreportPlatinum.html" id="courses"><i class="fas fa-users"></i> Engage</a></li>'
-        authorised = true;
-    } else if (user == 'ibo') {
-        dashboardReportTabs = '<li><a href="../ibo/ibodashboard.html" id="dashboard"><i class="fas fa-users"></i> Dashboard</a></li> \
-                <li><a href="../ibo/coursesalesreport.html" id="courses"><i class="fas fa-users"></i> Engage</a></li>'
+    /* if (user == 'platinum') {
+         dashboardReportTabs = '<li><a href="../platinum/platinumdashboard.html" id="dashboard"><i class="fas fa-users"></i> Dashboard</a></li> \
+                 <li><a href="../platinum/coursesalesreportPlatinum.html" id="courses"><i class="fas fa-users"></i> Engage</a></li>'
+         authorised = true;
+     } else if (user == 'ibo') {
+         dashboardReportTabs = '<li><a href="../ibo/ibodashboard.html" id="dashboard"><i class="fas fa-users"></i> Dashboard</a></li> \
+                 <li><a href="../ibo/coursesalesreport.html" id="courses"><i class="fas fa-users"></i> Engage</a></li>'
+         authorised = true;
+     }
+
+     var communitySpecificTabs = '';
+     if (commType == 'HWL') {
+         communitySpecificTabs = '<li><a href="../viewcustomers.html" id="customers_sw"><i class="fas fa-users"></i> Customers</a></li> \
+                 <li id="leadmenu" class="nav-item dropdown"> \
+                     <a tabindex="0" class="nav-link dropdown-toggle" data-mdb-toggle="dropdown" aria-expanded="false" role="button" id="leadmanagement"><i class="fas fas fa-user-alt"></i> Lead Management</a>\
+                     <ul id="leadSubmenu" class="dropdown-menu">\
+                         <li><a class="dropdown-item" href="../leadmanagement/leads.html" id="communityLeads"><i class="fas fa-users"></i> Community Leads</a></li>\
+                         <li><a class="dropdown-item" href="../leadmanagement/leadmanagement.html" id="claimLeads"><i class="fas fa-users"></i> Claim Leads</a></li>\
+                         <li><a class="dropdown-item" href="../leadmanagement/personalleads.html" id="plleads"><i class="fas fa-users"></i> My Personal Leads</a></li>\
+                         <li><a class="dropdown-item" href="../leadmanagement/blindleads.html" id="blindleads"><i class="fas fa-users"></i> My Blind Leads</a></li>\
+                     </ul> \
+                 </li>'
+         authorised = true;
+     } else if (commType == 'GENERIC') {
+         communitySpecificTabs = '<li><a href="../viewcustomers_wq.html" id="customers_wq"><i class="fas fa-users"></i> Customers</a></li>'
+         authorised = true;
+     }*/
+    if (user === 'platinum' || commType === "HWL") {
         authorised = true;
     }
-
-    var communitySpecificTabs = '';
-    if (commType == 'HWL') {
-        communitySpecificTabs = '<li><a href="../viewcustomers.html" id="customers_sw"><i class="fas fa-users"></i> Customers</a></li> \
-                <li id="leadmenu" class="nav-item dropdown"> \
-                    <a tabindex="0" class="nav-link dropdown-toggle" data-mdb-toggle="dropdown" aria-expanded="false" role="button" id="leadmanagement"><i class="fas fas fa-user-alt"></i> Lead Management</a>\
-                    <ul id="leadSubmenu" class="dropdown-menu">\
-                        <li><a class="dropdown-item" href="../leadmanagement/leads.html" id="communityLeads"><i class="fas fa-users"></i> Community Leads</a></li>\
-                        <li><a class="dropdown-item" href="../leadmanagement/leadmanagement.html" id="claimLeads"><i class="fas fa-users"></i> Claim Leads</a></li>\
-                        <li><a class="dropdown-item" href="../leadmanagement/personalleads.html" id="plleads"><i class="fas fa-users"></i> My Personal Leads</a></li>\
-                        <li><a class="dropdown-item" href="../leadmanagement/blindleads.html" id="blindleads"><i class="fas fa-users"></i> My Blind Leads</a></li>\
-                    </ul> \
-                </li>'
-        authorised = true;
-    } else if (commType == 'GENERIC') {
-        communitySpecificTabs = '<li><a href="../viewcustomers_wq.html" id="customers_wq"><i class="fas fa-users"></i> Customers</a></li>'
-        authorised = true;
-    }
-
     var commonTabs = '';
     var commonFooter = '</div>';
     if (authorised) {

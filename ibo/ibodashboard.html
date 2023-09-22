@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>WQ CRM</title>
+    <title>Program Tracking</title>
     <link rel="stylesheet" href="../css/bootstrap.min.css" />
     <link rel="stylesheet" href="../css/all.css" />
     <link rel="stylesheet" href="../css/common.css" />
@@ -19,26 +19,32 @@
             <h3 class="header-title">Dashboard</h3>
             <div class="card">
                 <div class="card-body">
-                <h3 class="header-title">Top 10 IBOs #followups</h3>
+                <h3 class="header-title">Top Performing IBOs </h3>
                     <div class="overflow-auto patient-registration">
-                        <script type="text/javascript" src="https://c0hcv782.caspio.com/dp/fea3a0002a27f5c8947142b49a10/emb"></script>
-                    </div>
-                </div>
-                <div class="card-body">
-                <h3 class="header-title">TOP 10 IBOs #new prospects</h3>
-                    <div class="overflow-auto patient-registration">
-                        <script type="text/javascript" src="https://c0hcv782.caspio.com/dp/fea3a0008fcdf94e9bfb47f0b42d/emb"></script>
+                        <script type="text/javascript" src="https://c0hcv782.caspio.com/dp/FEA3A000e1d4fa9d2f3e42a9b246/emb"></script>
                     </div>
                 </div>
                 <div class="card-body">
                 <h3 class="header-title">Notifications</h3>
                     <div class="overflow-auto patient-registration">
-                        <script type="text/javascript" src="https://c0hcv782.caspio.com/dp/fea3a0009c9108daeb3b40c397d5/emb"></script>
+                        <script type="text/javascript" src="https://c0hcv782.caspio.com/dp/fea3a000d74960fe40454184b55d/emb"></script>
                     </div>
                 </div>
                 <div class="card-body">
+                <!-- Moved to leadmanagement tab -->
+                <!--h3 class="header-title">Blind Lead Assignment</h3>
                     <div class="overflow-auto patient-registration">
-                        <script type="text/javascript" src="https://c0hcv782.caspio.com/dp/fea3a0005f7d3affce4544aeb9b5/emb"></script>
+                        <script type="text/javascript" src="https://c0hcv782.caspio.com/dp/FEA3A0009e83fe4cf7524a6dbfc9/emb"></script>
+                    </div>
+                </div-->
+                <div class="card-body">
+                    <!-- IBO Monthly Report -->    
+                    <div class="overflow-auto patient-registration">
+                        <script type="text/javascript" src="https://c0hcv782.caspio.com/dp/fea3a0009f1e3315c7b24d2a9958/emb"></script>
+                    </div>
+                    <!-- Downline list : It's not same as Platinum downline list, since non-platinum can't give CRM access, technically no details page. So separate datapage-->
+                    <div class="overflow-auto patient-registration">
+                        <script type="text/javascript" src="https://c0hcv782.caspio.com/dp/FEA3A000a1fddc1ec6374de09353/emb"></script>
                     </div>
                 </div>
             </div>
@@ -51,7 +57,7 @@
     <script src="../js/common.js"></script>
     <script>
         sessionStorage.setItem("userType", "ibo");
-        publicNavigation('ibodashboard');
+        swasthyaIboNavigation('dashboard');
     </script>
 </body>
 </html>

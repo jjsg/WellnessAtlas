@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>WQ CRM</title>
+    <title>Program Tracking</title>
     <link rel="stylesheet" href="./css/bootstrap.min.css" />
     <link rel="stylesheet" href="./css/all.css" />
     <link rel="stylesheet" href="./css/common.css" />
@@ -16,11 +16,15 @@
     <div class="d-flex align-items-center">
       </div>
         <div class="col-md-12">
-            <h3 class="header-title">Customer Details</h3>
+            <div class="stepper-wrapper">
+               
+            </div>
+            
+            <h3 id="header-title" class="header-title">Lifestyle Assessment Details</h3>
             <div class="card">
                 <div class="card-body">
                     <div class="overflow-auto patient-registration">
-                        <script type="text/javascript" src="https://c0hcv782.caspio.com/dp/fea3a000acb11f737fcf4c8a88b1/emb"></script>
+                        <script type="text/javascript" src="https://c0hcv782.caspio.com/dp/FEA3A000fe2d2635f4eb40f0b214/emb"></script>
                     </div>
 			   </div>
             </div>
@@ -32,7 +36,15 @@
     <script src="./js/all.js"></script>
     <script src="./js/common.js"></script>
     <script>
-        iboNavigation('patientRegistration');
+        //value is set in storage in html script written in customer basic details update datapage
+        var custName = sessionStorage.getItem("customerName");
+        document.getElementById("header-title").innerHTML = "Lifestyle Assessment Details - " + custName;
+        swasthyaIboNavigation('customers');
+        $("#step-1").removeClass("completed");
+        $("#step-2").addClass("completed");
+        $("#step-3").removeClass("completed");
+        $("#step-4").removeClass("completed");
+        $("#step-5").removeClass("completed");
     </script>
 </body>
 </html>

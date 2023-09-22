@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>WQ CRM</title>
+    <title>Program Tracking</title>
     <link rel="stylesheet" href="./css/bootstrap.min.css" />
     <link rel="stylesheet" href="./css/all.css" />
     <link rel="stylesheet" href="./css/common.css" />
@@ -17,11 +17,14 @@
     <div class="d-flex align-items-center">
       </div>
         <div class="col-md-12">
+            <div class="stepper-wrapper">
+                
+            </div>
             <h3 class="header-title">Add Interaction</h3>
             <div class="card">
                 <div class="card-body">
                     <div class="overflow-auto patient-registration">
-                        <script type="text/javascript" src="https://c0hcv782.caspio.com/dp/fea3a000982646aefee3485bb11d/emb"></script>
+                        <script type="text/javascript" src="https://c0hcv782.caspio.com/dp/FEA3A000cd9b10c9c095421c8fd6/emb"></script>
                     </div>
                 </div>
             </div>
@@ -33,7 +36,10 @@
     <script src="./js/all.js"></script>
     <script src="./js/common.js"></script>
     <script>
-        iboNavigation('patientRegistration');
+        //value is set in storage in html script written in customer basic details update datapage
+        var custName = sessionStorage.getItem("customerName");
+        document.getElementById("header-title").innerHTML = "Add Interaction - " + custName;
+        swasthyaIboNavigation('customers');
     </script>
 </body>
 </html>

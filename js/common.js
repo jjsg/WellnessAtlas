@@ -87,7 +87,7 @@ function swasthyaIboNavigation(activePage) {
 
     var communitySpecificTabs = '';
     if (commType == 'HWL') {
-        communitySpecificTabs = '<li><a href="../viewcustomers_wq_mfm.html" id="customers_sw"><i class="fas fa-users"></i> Customers</a></li> \
+        communitySpecificTabs = '<li><a href="../viewcustomers.html" id="customers_sw"><i class="fas fa-users"></i> Customers</a></li> \
                 <li id="leadmenu" class="nav-item dropdown"> \
                     <a tabindex="0" class="nav-link dropdown-toggle" data-mdb-toggle="dropdown" aria-expanded="false" role="button" id="leadmanagement"><i class="fas fas fa-user-alt"></i> Lead Management</a>\
                     <ul id="leadSubmenu" class="dropdown-menu">\

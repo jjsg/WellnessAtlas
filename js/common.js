@@ -99,7 +99,7 @@ function swasthyaIboNavigation(activePage) {
                 </li>'
         authorised = true;
     } else if (commType == 'GENERIC') {
-        communitySpecificTabs = '<li><a href="../viewcustomers_wq.html" id="customers_wq"><i class="fas fa-users"></i> Customers</a></li>'
+        communitySpecificTabs = '<li><a href="../viewcustomers_wq_mfm.html" id="customers_wq"><i class="fas fa-users"></i> Customers</a></li>'
         authorised = true;
     }
 

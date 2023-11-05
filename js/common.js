@@ -69,63 +69,36 @@ function platinumNavigation(activePage) {
 function swasthyaIboNavigation(activePage) {
     var user = sessionStorage.getItem("userType");
     var commType = sessionStorage.getItem("commType");
-    var commonHeader = '<div class="container"> \
-        <h5 style="color:white">Wellness Atlas</h5>'
-
     var dashboardReportTabs = '';
     var authorised = false;
-    /* if (user == 'platinum') {
-         dashboardReportTabs = '<li><a href="../platinum/platinumdashboard.html" id="dashboard"><i class="fas fa-users"></i> Dashboard</a></li> \
-                 <li><a href="../platinum/coursesalesreportPlatinum.html" id="courses"><i class="fas fa-users"></i> Engage</a></li>'
+
+    if (user == 'platinum') {
+         dashboardReportTabs = '<li><a href="../platinum/platinumdashboard.html" id="Dashboard"><i class="bx bx-grid-alt"></i><span class="link_name">Dashboard</span></a></li> \
+                 <li><a href="../platinum/coursesalesreportPlatinum.html" id="Engage"><i class="bx bxs-badge-dollar"></i><span class="link_name">Engage</span></a></li>'
          authorised = true;
      } else if (user == 'ibo') {
-         dashboardReportTabs = '<li><a href="../ibo/ibodashboard.html" id="dashboard"><i class="fas fa-users"></i> Dashboard</a></li> \
-                 <li><a href="../ibo/coursesalesreport.html" id="courses"><i class="fas fa-users"></i> Engage</a></li>'
+         dashboardReportTabs = '<li><a href="../ibo/ibodashboard.html" id="Dashboard"><i class="bx bx-grid-alt"></i><span class="link_name">Dashboard</span></a></li> \
+                 <li><a href="../ibo/coursesalesreport.html" id="Engage"><i class="bx bxs-badge-dollar"></i><span class="link_name">Engage</span></a></li>'
          authorised = true;
      }
 
      var communitySpecificTabs = '';
      if (commType == 'HWL') {
-         communitySpecificTabs = '<li><a href="../viewcustomers.html" id="customers_sw"><i class="fas fa-users"></i> Customers</a></li> \
-                 <li id="leadmenu" class="nav-item dropdown"> \
-                     <a tabindex="0" class="nav-link dropdown-toggle" data-mdb-toggle="dropdown" aria-expanded="false" role="button" id="leadmanagement"><i class="fas fas fa-user-alt"></i> Lead Management</a>\
-                     <ul id="leadSubmenu" class="dropdown-menu">\
-                         <li><a class="dropdown-item" href="../leadmanagement/leads.html" id="communityLeads"><i class="fas fa-users"></i> Community Leads</a></li>\
-                         <li><a class="dropdown-item" href="../leadmanagement/leadmanagement.html" id="claimLeads"><i class="fas fa-users"></i> Claim Leads</a></li>\
-                         <li><a class="dropdown-item" href="../leadmanagement/personalleads.html" id="plleads"><i class="fas fa-users"></i> My Personal Leads</a></li>\
-                         <li><a class="dropdown-item" href="../leadmanagement/blindleads.html" id="blindleads"><i class="fas fa-users"></i> My Blind Leads</a></li>\
-                     </ul> \
-                 </li>'
-         authorised = true;
+         communitySpecificTabs = '<li><a href="../viewcustomers.html" id="Customers"><i class="bx bx-group"></i><span class="link_name">Customers</span></a></li>\
+                <li><a id="Leads" href="/WQCRM/leadmanagement/leadmanagement.html"><i class="bx bx-body"></i><span class="link_name">Leads</span></a></li>'
      } else if (commType == 'GENERIC') {
-         communitySpecificTabs = '<li><a href="../viewcustomers_wq.html" id="customers_wq"><i class="fas fa-users"></i> Customers</a></li>'
-         authorised = true;
-     }*/
-    if (user === 'platinum' || commType === "HWL") {
-        authorised = true;
-    }
+         communitySpecificTabs = '<li><a href="../viewcustomers_wq.html" id="Customers"><i class="bx bx-group"></i><span class="link_name">Customers</span></a></li>'
+     }
     var commonTabs = '';
-    var commonFooter = '</div>';
     if (authorised) {
-        commonHeader = commonHeader + '<ul id="portalNavbar">';
-        commonTabs = '<li><a href="../resourceList.html" id="resources"><i class="fas fa-users"></i> Resources</a></li> \
-                <li id="testimoniesmenu" class="nav-item dropdown"> \
-                    <a tabindex="0" class="nav-link dropdown-toggle" data-mdb-toggle="dropdown" aria-expanded="false" role="button" id="testimonies"><i class="fas fas fa-user-alt"></i> Social</a>\
-                    <ul id="testimoniesSubmenu" class="dropdown-menu">\
-                        <li><a class="dropdown-item" href="../social/testimonial.html" id="submitTestimonial"><i class="fas fa-users"></i> Submit Testimonal</a></li>\
-                        <li><a class="dropdown-item" href="../social/mytestimonial.html" id="myTestimonial"><i class="fas fa-users"></i> My Testimonial</a></li> \
-                        <li><a class="dropdown-item" href="../social/viewalltestimonial.html" id="viewTestimonial"><i class="fas fa-users"></i> View Testimonial</a></li> \
-                        <li><a class="dropdown-item" href="../social/approvetestimonials.html" id="approveTestimonial"><i class="fas fa-users"></i> Approve Testimonial</a></li> \
-                    </ul>\
-                </li> \
-                <li><a href="../iboprofileupdate.html" id="patientRegistration"><i class="fas fas fa-user-alt"></i> Profile</a></li> \
-                <li><a href="https://c0hcv782.caspio.com/folderlogout" id="patientRegistration"><i class="fas fa-users"></i> Logout</a></li> \
-            </ul> \
-            <button type="button" class="btn btn-sm navbar-toggler" id="navbarToggle"><span class="navbar-toggler-icon"></span></button>'
+        commonTabs = '<li><a href="../resourceList.html" id="Resources"><i class="bx bx-link"></i><span class="link_name">Resources</span></a></li>\
+                <li><a id="Social" href="/WQCRM/social/testimonial.html"><i class="bx bx-shape-polygon"></i><span class="link_name">Social</span></a></li>\
+                <li><a href="../iboprofileupdate.html" id="Profile"><i class="bx bx-user-pin"></i><span class="link_name">Profile</span></a></li>\
+                <li><a href="https://c0hcv782.caspio.com/folderlogout" id="Logout"><i class="bx bx-log-out"></i><span class="link_name">Logout</span></a></li>'
     }
 
-    var htmlString = commonHeader + dashboardReportTabs + communitySpecificTabs + commonTabs + commonFooter;
-    $('nav:not([aria-label="breadcrumb"])').html(htmlString);
+    var htmlString = dashboardReportTabs + communitySpecificTabs + commonTabs;
+    $('#wqmenu').html(htmlString);
 
 
     if (activePage == "customers" && commType == "HWL") {
@@ -317,7 +290,7 @@ function getUrlVars() {
 }
 
 
-function iboNavigation(activePage) {
+/*function iboNavigation(activePage) {
     var user = sessionStorage.getItem("userType");
     var commType = sessionStorage.getItem("commType");
 
@@ -347,7 +320,7 @@ function iboNavigation(activePage) {
     if (activePage) {
         $('#' + activePage).addClass('active');
     }
-}
+}*/
 
 /*function iboNavigation(activePage) {
     var user = sessionStorage.getItem("userType");

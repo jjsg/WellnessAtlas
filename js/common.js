@@ -85,14 +85,14 @@ function swasthyaIboNavigation(activePage) {
      var communitySpecificTabs = '';
      if (commType == 'HWL') {
          communitySpecificTabs = '<li><a href="../viewcustomers.html" id="Customers"><i class="bx bx-group"></i><span class="link_name">Customers</span></a></li>\
-                <li><a id="Leads" href="/WQCRM/leadmanagement/leadmanagement.html"><i class="bx bx-body"></i><span class="link_name">Leads</span></a></li>'
+                <li><a id="Leads" href="../leadmanagement/leadmanagement.html"><i class="bx bx-body"></i><span class="link_name">Leads</span></a></li>'
      } else if (commType == 'GENERIC') {
          communitySpecificTabs = '<li><a href="../viewcustomers_wq.html" id="Customers"><i class="bx bx-group"></i><span class="link_name">Customers</span></a></li>'
      }
     var commonTabs = '';
     if (authorised) {
         commonTabs = '<li><a href="../resourceList.html" id="Resources"><i class="bx bx-link"></i><span class="link_name">Resources</span></a></li>\
-                <li><a id="Social" href="/WQCRM/social/testimonial.html"><i class="bx bx-shape-polygon"></i><span class="link_name">Social</span></a></li>\
+                <li><a id="Social" href="..//social/testimonial.html"><i class="bx bx-shape-polygon"></i><span class="link_name">Social</span></a></li>\
                 <li><a href="../iboprofileupdate.html" id="Profile"><i class="bx bx-user-pin"></i><span class="link_name">Profile</span></a></li>\
                 <li><a href="https://c0hcv782.caspio.com/folderlogout" id="Logout"><i class="bx bx-log-out"></i><span class="link_name">Logout</span></a></li>'
     }
@@ -101,7 +101,7 @@ function swasthyaIboNavigation(activePage) {
     $('#wqmenu').html(htmlString);
 
 
-    if (activePage == "customers" && commType == "HWL") {
+    /*if (activePage == "customers" && commType == "HWL") {
         var custId = sessionStorage.getItem("customerID");
         $(".stepper-wrapper").eq(0).html('<div id="step-1" class="stepper-item completed">\
                   <div class="step-counter"><a id="stage-1" href="./customerdetails.html?custid=' + custId + '">1</a></div>\
@@ -127,7 +127,7 @@ function swasthyaIboNavigation(activePage) {
                   <div class="step-counter"><a id="stage-5" href="./resourceList.html?custid=' + custId + '">5</a></div>\
                   <div class="step-name">Resource List</div>\
                 </div-->')
-    }
+    }*/
 
     if (activePage) {
         $('#' + activePage).addClass('active');

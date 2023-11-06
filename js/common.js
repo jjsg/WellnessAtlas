@@ -73,22 +73,22 @@ function swasthyaIboNavigation(activePage) {
     var authorised = false;
 
     if (user == 'platinum') {
-         dashboardReportTabs = '<li><a href="../platinum/platinumdashboard.html" id="Dashboard"><i class="bx bx-grid-alt"></i><span class="link_name">Dashboard</span></a></li> \
+        dashboardReportTabs = '<li><a href="../platinum/platinumdashboard.html" id="Dashboard"><i class="bx bx-grid-alt"></i><span class="link_name">Dashboard</span></a></li> \
                  <li><a href="../platinum/coursesalesreportPlatinum.html" id="Engage"><i class="bx bxs-badge-dollar"></i><span class="link_name">Engage</span></a></li>'
-         authorised = true;
-     } else if (user == 'ibo') {
-         dashboardReportTabs = '<li><a href="../ibo/ibodashboard.html" id="Dashboard"><i class="bx bx-grid-alt"></i><span class="link_name">Dashboard</span></a></li> \
+        authorised = true;
+    } else if (user == 'ibo') {
+        dashboardReportTabs = '<li><a href="../ibo/ibodashboard.html" id="Dashboard"><i class="bx bx-grid-alt"></i><span class="link_name">Dashboard</span></a></li> \
                  <li><a href="../ibo/coursesalesreport.html" id="Engage"><i class="bx bxs-badge-dollar"></i><span class="link_name">Engage</span></a></li>'
-         authorised = true;
-     }
+        authorised = true;
+    }
 
-     var communitySpecificTabs = '';
-     if (commType == 'HWL') {
-         communitySpecificTabs = '<li><a href="../viewcustomers.html" id="Customers"><i class="bx bx-group"></i><span class="link_name">Customers</span></a></li>\
+    var communitySpecificTabs = '';
+    if (commType == 'HWL') {
+        communitySpecificTabs = '<li><a href="../viewcustomers.html" id="Customers"><i class="bx bx-group"></i><span class="link_name">Customers</span></a></li>\
                 <li><a id="Leads" href="../leadmanagement/leadmanagement.html"><i class="bx bx-body"></i><span class="link_name">Leads</span></a></li>'
-     } else if (commType == 'GENERIC') {
-         communitySpecificTabs = '<li><a href="../viewcustomers_wq.html" id="Customers"><i class="bx bx-group"></i><span class="link_name">Customers</span></a></li>'
-     }
+    } else if (commType == 'GENERIC') {
+        communitySpecificTabs = '<li><a href="../viewcustomers_wq_mfm.html" id="Customers"><i class="bx bx-group"></i><span class="link_name">Customers</span></a></li>'
+    }
     var commonTabs = '';
     if (authorised) {
         commonTabs = '<li><a href="../resourceList.html" id="Resources"><i class="bx bx-link"></i><span class="link_name">Resources</span></a></li>\

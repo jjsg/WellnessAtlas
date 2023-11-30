@@ -568,7 +568,7 @@ main.container{
      top: 0;
      left: 0;
      height: 100%;
-     width: 260px;
+     width: 78px;
      background: #051324;
      z-index: 100;
      transition: all 0.5s ease;
@@ -663,21 +663,23 @@ main.container{
  }
 
  .sidebar .nav-links li a {
-     display: flex;
+     display: inline-grid;
      align-items: center;
      text-decoration: none;
  }
 
  .sidebar .nav-links li a .link_name {
-     font-size: 18px;
+     font-size: 14px;
      font-weight: 400;
      color: #fff;
      transition: all 0.4s ease;
+     margin: auto;
  }
 
  .sidebar.close .nav-links li a .link_name {
-     opacity: 0;
+     /*opacity: 0;*/
      pointer-events: none;
+     margin: auto;
  }
 
  .sidebar .nav-links li .sub-menu {
@@ -808,9 +810,8 @@ main.container{
      position: relative;
      background: #ECEAEA;
      height: 100vh;
-     left: 260px;
-     width: calc(100% - 260px);
-     transition: all 0.5s ease;
+     left: 78px;
+     width: 100%;
  }
 
  .sidebar.close~.home-section {

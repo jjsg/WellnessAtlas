@@ -97,9 +97,9 @@ function swasthyaIboNavigation(activePage) {
                 <li><a href="../iboprofileupdate.html" id="Profile"><i class="bx bx-user-pin"></i><span class="link_name">Profile</span></a></li>\
                 <li><a href="https://c0hcv782.caspio.com/folderlogout" id="Logout"><i class="bx bx-log-out"></i><span class="link_name">Logout</span></a></li>'
     }
-    
-    document.getElementById("addcustomer").value = document.getElementById("addcustomer").value + sessionStorage.getItem('iboid');
-    
+    if(document.getElementById("addcustomer")){
+	document.getElementById("addcustomer").value = document.getElementById("addcustomer").value + sessionStorage.getItem('iboid');
+    }
     var htmlString = dashboardReportTabs + communitySpecificTabs + commonTabs;
     $('#wqmenu').html(htmlString);
 

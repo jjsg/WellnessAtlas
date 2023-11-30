@@ -66,6 +66,7 @@ function platinumNavigation(activePage) {
     }
 }*/
 
+
 function swasthyaIboNavigation(activePage) {
     var user = sessionStorage.getItem("userType");
     var commType = sessionStorage.getItem("commType");
@@ -96,7 +97,9 @@ function swasthyaIboNavigation(activePage) {
                 <li><a href="../iboprofileupdate.html" id="Profile"><i class="bx bx-user-pin"></i><span class="link_name">Profile</span></a></li>\
                 <li><a href="https://c0hcv782.caspio.com/folderlogout" id="Logout"><i class="bx bx-log-out"></i><span class="link_name">Logout</span></a></li>'
     }
-
+    
+    document.getElementById("addcustomer").value = document.getElementById("addcustomer").value + sessionStorage.getItem('iboid');
+    
     var htmlString = dashboardReportTabs + communitySpecificTabs + commonTabs;
     $('#wqmenu').html(htmlString);
 
@@ -356,9 +359,9 @@ function getUrlVars() {
     }
 }*/
 
-function copyWellness() {
+function copyWellness(event) {
     // Get the text field
-    var copyText = document.getElementById("wellnessProfileLinkVal");
+    var copyText = document.getElementById("addcustomer");
 
     // Select the text field
     copyText.select();
@@ -366,6 +369,7 @@ function copyWellness() {
 
     // Copy the text inside the text field
     navigator.clipboard.writeText(copyText.value);
+    event.value = "Copied";
 }
 
 function loginNavigationIBO(activePage) {

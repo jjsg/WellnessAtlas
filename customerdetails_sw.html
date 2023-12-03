@@ -127,6 +127,11 @@
                 }
             });
 
+            $('.cbFormMultiSelect div[style]').each(function (e, ele) {
+                 if($(ele).height() == 0){
+            		$(ele).css('height','150px');
+            	 };
+            });
         });
     </script>
 </body>

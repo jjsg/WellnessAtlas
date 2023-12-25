@@ -54,7 +54,7 @@ function platinumNavigation(activePage) {
         $('nav:not([aria-label="breadcrumb"])').html('<div class="container"> \
     <a href="./index.html" id="siteTitle"><h5>IBO Dashboard</h5></a> \
         <ul id="portalNavbar"> \
-            <li><a href="./ibo/ibodashboard.html" id="dashboard"><i class="fas fa-users"></i> Dashboard</a></li> \ <<li><a href="./courseresalesport.html" id="courses"><i class="fas fa-users"></i> Engage</a></li> \li><a href="../viewcustomers_wq_mfm.html" id="customers"><i class="fas fa-users"></i> Customers</a></li> \<li><a href="../iboprofileupdate.html" id="patientRegistration"><i class="fas fas fa-user-alt"></i> Profile</a></li> \ \<li><a href="https://c0hcv782.caspio.com/folderlogout" id="patientRegistration"><i class="fas fa-users"></i> Logout</a></li> \
+            <li><a href="./ibo/ibodashboard.html" id="dashboard"><i class="fas fa-users"></i> Dashboard</a></li> \ <<li><a href="./courseresalesport.html" id="courses"><i class="fas fa-users"></i> Transactions</a></li> \li><a href="../viewcustomers_wq_mfm.html" id="customers"><i class="fas fa-users"></i> Customers</a></li> \<li><a href="../iboprofileupdate.html" id="patientRegistration"><i class="fas fas fa-user-alt"></i> Profile</a></li> \ \<li><a href="https://c0hcv782.caspio.com/folderlogout" id="patientRegistration"><i class="fas fa-users"></i> Logout</a></li> \
         </ul> \
     <button type="button" class="btn btn-sm navbar-toggler" id="navbarToggle"><span class="navbar-toggler-icon"></span></button>  \
     </div> \
@@ -75,11 +75,11 @@ function swasthyaIboNavigation(activePage) {
 
     if (user == 'platinum') {
         dashboardReportTabs = '<li><a href="../platinum/platinumdashboard.html" id="Dashboard"><i class="bx bx-grid-alt"></i><span class="link_name">Dashboard</span></a></li> \
-                 <li><a href="../platinum/coursesalesreportPlatinum.html" id="Engage"><i class="bx bxs-badge-dollar"></i><span class="link_name">Engage</span></a></li>'
+                 <li><a href="../platinum/coursesalesreportPlatinum.html" id="Transactions"><i class="bx bxs-badge-dollar"></i><span class="link_name">Transactions</span></a></li>'
         authorised = true;
     } else if (user == 'ibo') {
         dashboardReportTabs = '<li><a href="../ibo/ibodashboard.html" id="Dashboard"><i class="bx bx-grid-alt"></i><span class="link_name">Dashboard</span></a></li> \
-                 <li><a href="../ibo/coursesalesreport.html" id="Engage"><i class="bx bxs-badge-dollar"></i><span class="link_name">Engage</span></a></li>'
+                 <li><a href="../ibo/coursesalesreport.html" id="Transactions"><i class="bx bxs-badge-dollar"></i><span class="link_name">Transactions</span></a></li>'
         authorised = true;
     }
 
@@ -299,7 +299,7 @@ function getUrlVars() {
 
     if (user == "ibo") {
         $('#wqmenu').html('<li><a id="Dashboard" href="/WQCRM/ibo/ibodashboard.html"><i class="bx bx-grid-alt"></i><span class="link_name">Dashboard</span></a></li>\
-            <li><a id="Engage" href="/WQCRM/ibo/coursesalesreport.html"><i class="bx bxs-badge-dollar"></i><span class="link_name">Engage</span></a></li>\
+            <li><a id="Transactions" href="/WQCRM/ibo/coursesalesreport.html"><i class="bx bxs-badge-dollar"></i><span class="link_name">Transactions</span></a></li>\
             <li><a id="Customers" href="/WQCRM/viewcustomers_wq.html"><i class="bx bx-group"></i><span class="link_name">Customers</span></a></li>\
             <li><a id="Resources" href="/WQCRM/resourceList.html"><i class="bx bx-link"></i><span class="link_name">Resources</span></a></li>\
             <li><a id="Social" href="/WQCRM/social/testimonial.html"><i class="bx bx-shape-polygon"></i><span class="link_name">Social</span></a></li>\
@@ -308,7 +308,7 @@ function getUrlVars() {
     } else {
 
         $('#wqmenu').html('<li><a id="Dashboard" href="/WQCRM/platinum/platinumdashboard.html"><i class="bx bx-grid-alt"></i><span class="link_name">Dashboard</span></a></li>\
-            <li><a id="Engage" href="/WQCRM/platinum/coursesalesreportPlatinum.html"><i class="bx bxs-badge-dollar"></i><span class="link_name">Engage</span></a></li>\
+            <li><a id="Transactions" href="/WQCRM/platinum/coursesalesreportPlatinum.html"><i class="bx bxs-badge-dollar"></i><span class="link_name">Transactions</span></a></li>\
             <li><a id="Customers" href="/WQCRM/viewcustomers_wq.html"><i class="bx bx-group"></i><span class="link_name">Customers</span></a></li>\
             <li><a id="Resources" href="/WQCRM/resourceList.html"><i class="bx bx-link"></i><span class="link_name">Resources</span></a></li>\
             <li><a id="Social" href="/WQCRM/social/testimonial.html"><i class="bx bx-shape-polygon"></i><span class="link_name">Social</span></a><i class="bx bxs-chevron-down arrow"></i></li>\
@@ -329,7 +329,7 @@ function getUrlVars() {
     var user = sessionStorage.getItem("userType");
     if (user == "ibo") {
         $('#wqmenu').html('<li><a id="Dashboard" href="ibo/ibodashboard.html"><i class="bx bx-grid-alt"></i><span class="link_name">Dashboard</span></a></li>\
-            <li><a id="Engage" href="ibo/coursesalesreport.html"><i class="bx bxs-badge-dollar"></i><span class="link_name">Engage</span></a></li>\
+            <li><a id="Transactions" href="ibo/coursesalesreport.html"><i class="bx bxs-badge-dollar"></i><span class="link_name">Transactions</span></a></li>\
             <li><a id="Customers" href="viewcustomers_wq.html"><i class="bx bx-group"></i><span class="link_name">Customers</span></a></li>\
             <li><a id="Resources" href="resourceList.html"><i class="bx bx-link"></i><span class="link_name">Resources</span></a></li>\
             <li><a id="Social" href="#"><i class="bx bx-shape-polygon"></i><span class="link_name">Social</span></a><i class="bx bxs-chevron-down arrow"></i>\
@@ -342,7 +342,7 @@ function getUrlVars() {
     } else {
 
         $('#wqmenu').html('<li><a id="Dashboard" href="/platinum/platinumdashboard.html"><i class="bx bx-grid-alt"></i><span class="link_name">Dashboard</span></a></li>\
-            <li><a id="Engage" href="/platinum/coursesalesreportPlatinum.html"><i class="bx bxs-badge-dollar"></i><span class="link_name">Engage</span></a></li>\
+            <li><a id="Transactions" href="/platinum/coursesalesreportPlatinum.html"><i class="bx bxs-badge-dollar"></i><span class="link_name">Transactions</span></a></li>\
             <li><a id="Customers" href="viewcustomers_wq.html"><i class="bx bx-group"></i><span class="link_name">Customers</span></a></li>\
             <li><a id="Resources" href="resourceList.html"><i class="bx bx-link"></i><span class="link_name">Resources</span></a></li>\
             <li><a id="Social" href="#"><i class="bx bx-shape-polygon"></i><span class="link_name">Social</span></a><i class="bx bxs-chevron-down arrow"></i>\

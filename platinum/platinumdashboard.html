@@ -36,7 +36,7 @@
                 </h2>
                 <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
-                        <script type="text/javascript" src="dummy/emb"></script>
+                        <script type="text/javascript" src="https://c0hcv782.caspio.com/dp/fea3a000a2b76a57a56a4016bbe5/emb"></script>
                     </div>
                 </div>
             </div>
@@ -121,17 +121,28 @@
             var leaderType=sessionStorage.getItem("leadertype");
             swasthyaIboNavigation('Dashboard');
 
-            function setScriptSource() {
-            var scriptElement = document.querySelector("#collapseOne script");
+            function fetchData() {
+            var url;
             
-            if (leaderType === "platinum" || leaderType === "emerald") {
-                scriptElement.src = "https://c0hcv782.caspio.com/dp/fea3a000a2b76a57a56a4016bbe5/emb";
-            } else if (leaderType === "diamond") {
-                scriptElement.src = "https://c0hcv782.caspio.com/dp/fea3a000a67cba6fc4ac4550a125/emb";
+            if (leaderType === "diamond") {
+                url = "https://c0hcv782.caspio.com/dp/fea3a000a67cba6fc4ac4550a125/emb";
             }
+
+            fetch(url)
+                .then(response => response.text())
+                .then(data => {
+                    // Process the fetched data as needed
+                    document.querySelector("#collapseOne .accordion-body").innerHTML = data;
+                })
+                .catch(error => console.error('Error fetching data:', error));
         }
 
-        setScriptSource();
+        // Call the function to fetch and load the initial data
+        fetchData();
+        
+        var leaderType = sessionStorage.getItem("leadertype");
+        swasthyaIboNavigation('Dashboard');
+       
             
         });
     </script>

@@ -145,8 +145,15 @@
                 url = "https://c0hcv782.caspio.com/dp/fea3a000a67cba6fc4ac4550a125/emb";
             }
 
-            document.getElementById("analytics").setAttribute("src", url);
+            
 
+            if (leaderType === "platinum" || leaderType === "emerald") {
+                scriptElement.src = "https://c0hcv782.caspio.com/dp/fea3a000a2b76a57a56a4016bbe5/emb";
+            } else if (leaderType === "diamond") {
+                scriptElement.src = "https://c0hcv782.caspio.com/dp/fea3a000a67cba6fc4ac4550a125/emb";
+            }
+          document.getElementById("analytics").setAttribute("src", url);
+        
         });
     </script>
 

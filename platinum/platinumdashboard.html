@@ -37,8 +37,11 @@
                 </h2>
                 <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
                     data-bs-parent="#accordionExample">
-                    <div class="accordion-body">
-                        <script id="analytics" type="text/javascript" src=""></script>
+                    <div class="accordion-body hide" id="platinumAanalytics">   
+							<script type="text/javascript" src="https://c0hcv782.caspio.com/dp/fea3a000a2b76a57a56a4016bbe5/emb" />
+                    </div>
+					 <div class="accordion-body hide" id="diamondAanalytics">   
+							<script type="text/javascript" src="https://c0hcv782.caspio.com/dp/fea3a000a67cba6fc4ac4550a125/emb" />
                     </div>
                 </div>
             </div>
@@ -135,24 +138,12 @@
             sessionStorage.setItem("userType", "platinum");
             var leaderType = sessionStorage.getItem("leadertype");
             swasthyaIboNavigation('Dashboard');
-            var url;
-
 
             if (leaderType === "platinum" || leaderType === "emerald") {
-                url = "https://c0hcv782.caspio.com/dp/fea3a000a2b76a57a56a4016bbe5/emb";
-            }
-            else if(leaderType === "diamond"){
-                url = "https://c0hcv782.caspio.com/dp/fea3a000a67cba6fc4ac4550a125/emb";
-            }
-
-            
-
-            if (leaderType === "platinum" || leaderType === "emerald") {
-                scriptElement.src = "https://c0hcv782.caspio.com/dp/fea3a000a2b76a57a56a4016bbe5/emb";
+					$("#platinumAanalytics").removeClass("hide");
             } else if (leaderType === "diamond") {
-                scriptElement.src = "https://c0hcv782.caspio.com/dp/fea3a000a67cba6fc4ac4550a125/emb";
-            }
-          document.getElementById("analytics").setAttribute("src", url);
+				$("#diamondAanalytics").removeClass("hide");
+            }      
         
         });
     </script>

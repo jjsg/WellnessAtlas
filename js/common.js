@@ -68,7 +68,7 @@ function platinumNavigation(activePage) {
 
 
 function swasthyaIboNavigation(activePage) {
-    var user = sessionStorage.getItem("leaderType");
+    var user = sessionStorage.getItem("leadertype");
     var commType = sessionStorage.getItem("commType");
     var dashboardReportTabs = '';
     var authorised = false;

@@ -68,17 +68,17 @@ function platinumNavigation(activePage) {
 
 
 function swasthyaIboNavigation(activePage) {
-    var user = sessionStorage.getItem("userType");
+    var user = sessionStorage.getItem("leaderType");
     var commType = sessionStorage.getItem("commType");
     var dashboardReportTabs = '';
     var authorised = false;
 
-    if (user == 'platinum') {
+    if (user == 'platinum' || user == 'emerald') {
         dashboardReportTabs = '<li><a href="../platinum/platinumdashboard.html" id="Dashboard"><i class="bx bx-grid-alt"></i><span class="link_name">Dashboard</span></a></li> \
 				 <li><a href="../challenges/viewchallenges.html" id="Transactions"><i class="bx bxs-dice-6"></i><span class="link_name">Challenges</span></a></li> \
                  <li><a href="../platinum/coursesalesreportPlatinum.html" id="Transactions"><i class="bx bxs-badge-dollar"></i><span class="link_name">Transactions</span></a></li>'
         authorised = true;
-    } else if (user == 'ibo') {
+    } else if (user == 'member') {
         dashboardReportTabs = '<li><a href="../ibo/ibodashboard.html" id="Dashboard"><i class="bx bx-grid-alt"></i><span class="link_name">Dashboard</span></a></li> \
 				<li><a href="../challenges/viewchallenges.html" id="Transactions"><i class="bx bxs-dice-6"></i><span class="link_name">Challenges</span></a></li> \
                  <li><a href="../ibo/coursesalesreport.html" id="Transactions"><i class="bx bxs-badge-dollar"></i><span class="link_name">Transactions</span></a></li>'

@@ -261,38 +261,44 @@ $(document).ready(function() {
     var contrastFontColor = "#212529";
     var groupCP = Number.parseInt(sessionStorage.getItem("group_cp"));
     var r = document.querySelector(':root');
-    switch (groupCP > 0) {
-        case groupCP >= 20:
-            coachColor = purpleleader;
-            rgb = 'rgb(129,1,129)';
-            contrastFontColor = '#fff';
-          break;
-        case groupCP >= 15:
-            coachColor = redleader;
-            rgb = 'rgb(221,20,59)';
-            contrastFontColor = '#fff';
-          break;
-        case  groupCP >= 10:
-            coachColor = orangeleader;
-            rgb = 'rgb(255,165,3)';
-          break;
-        case groupCP >= 6:
-            coachColor = yellowcoach;
-            rgb = 'rgb(252,215,1)';
-          break;
-        case groupCP >= 3:
-            coachColor = bluecoach;
-            rgb = 'rgb(61,140,255)';
-            contrastFontColor = '#fff';
-          break;
-        case groupCP >= 1:
-            coachColor = greencoach;
-            rgb = 'rgb(105,168,100)';
-          break;
-        default:
-            coachColor = defaultColor;
-            rgb = 'rgb(240,233,212)';
-      }
+    if(groupCP <=0){
+              coachColor = defaultColor;
+                rgb = 'rgb(240,233,212)';
+    }else{
+        switch (groupCP > 0) {
+            case groupCP >= 20:
+                coachColor = purpleleader;
+                rgb = 'rgb(129,1,129)';
+                contrastFontColor = '#fff';
+              break;
+            case groupCP >= 15:
+                coachColor = redleader;
+                rgb = 'rgb(221,20,59)';
+                contrastFontColor = '#fff';
+              break;
+            case  groupCP >= 10:
+                coachColor = orangeleader;
+                rgb = 'rgb(255,165,3)';
+              break;
+            case groupCP >= 6:
+                coachColor = yellowcoach;
+                rgb = 'rgb(252,215,1)';
+              break;
+            case groupCP >= 3:
+                coachColor = bluecoach;
+                rgb = 'rgb(61,140,255)';
+                contrastFontColor = '#fff';
+              break;
+            case groupCP >= 1:
+                coachColor = greencoach;
+                rgb = 'rgb(105,168,100)';
+              break;
+            default:
+                coachColor = defaultColor;
+                rgb = 'rgb(240,233,212)';
+          }
+
+    }
     r.style.setProperty('--caochtheme', coachColor); 
     setTimeout(function() {
         $("table > thead > tr >th").css('background',rgb);

@@ -300,7 +300,7 @@ $(document).ready(function() {
 
     }
     r.style.setProperty('--caochtheme', coachColor); 
-    setTimeout(function() {
+    setInterval(function() {
         $("table > thead > tr >th").css('background',rgb);
         $("table > thead > tr >th .cbResultSetLabelLink").css('color' , contrastFontColor);
         $('.home-section').css('background',rgb);

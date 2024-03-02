@@ -39,33 +39,6 @@ function platinumNavigation(activePage) {
     }
 }
 
-/*function iboNavigation(activePage) {
-    var user = sessionStorage.getItem("userType");
-    if (user == "platinum") {
-        $('nav:not([aria-label="breadcrumb"])').html('<div class="container"> \
-    <a href="./index.html" id="siteTitle"><h5>Platinum Dashboard</h5></a> \
-        <ul id="portalNavbar"> \
-        <li><a href="./platinumdashboard.html" id="dashboard"><i class="fas fa-users"></i> Dashboard</a></li> \<li><a href="../viewcustomers_wq_mfm.html" id="customers"><i class="fas fa-users"></i> Customers</a></li> \<li><a href="../iboprofileupdate.html" id="patientRegistration"><i class="fas fas fa-user-alt"></i> Profile</a></li>\<li><a href="../platinum/leadmanagement.html" id="patientRegistration"><i class="fas fas fa-user-alt"></i>Leads</a></li> \<li><a href="https://c0hcv782.caspio.com/folderlogout" id="patientRegistration"><i class="fas fa-users"></i> Logout</a></li> \
-        </ul> \
-    <button type="button" class="btn btn-sm navbar-toggler" id="navbarToggle"><span class="navbar-toggler-icon"></span></button>  \
-    </div> \
-    ');
-    } else {
-        $('nav:not([aria-label="breadcrumb"])').html('<div class="container"> \
-    <a href="./index.html" id="siteTitle"><h5>IBO Dashboard</h5></a> \
-        <ul id="portalNavbar"> \
-            <li><a href="./ibo/ibodashboard.html" id="dashboard"><i class="fas fa-users"></i> Dashboard</a></li> \ <<li><a href="./courseresalesport.html" id="courses"><i class="fas fa-users"></i> Transactions</a></li> \li><a href="../viewcustomers_wq_mfm.html" id="customers"><i class="fas fa-users"></i> Customers</a></li> \<li><a href="../iboprofileupdate.html" id="patientRegistration"><i class="fas fas fa-user-alt"></i> Profile</a></li> \ \<li><a href="https://c0hcv782.caspio.com/folderlogout" id="patientRegistration"><i class="fas fa-users"></i> Logout</a></li> \
-        </ul> \
-    <button type="button" class="btn btn-sm navbar-toggler" id="navbarToggle"><span class="navbar-toggler-icon"></span></button>  \
-    </div> \
-    ');
-    }
-
-    if (activePage) {
-        $('#' + activePage).addClass('active');
-    }
-}*/
-
 
 function swasthyaIboNavigation(activePage) {
     var user = sessionStorage.getItem("leadertype");
@@ -147,15 +120,7 @@ function swasthyaIboNavigation(activePage) {
 
 
 function loginNavigationIBO(activePage) {
-    $('nav:not([aria-label="breadcrumb"])').html('<div class="container"> \
-    <a href="./index.html" id="siteTitle"><h5>Dashboard</h5></a> \
-        <ul id="portalNavbar"> \
-            <!--li><a href="./registration.html" id="registration"><i class="fas fa-users"></i> Registration</a></li--> \
-        </ul> \
-    <button type="button" class="btn btn-sm navbar-toggler" id="navbarToggle"><span class="navbar-toggler-icon"></span></button>  \
-    </div> \
-    ');
-
+   
     if (activePage) {
         $('#' + activePage).addClass('active');
     }
@@ -283,6 +248,60 @@ $(document).ready(function() {
     $('#leadmenu').on('click', function() {
         $('#leadSubmenu').toggleClass('show');
     });
+    // logic for groupc colour theme bands;
+    var defaultColor = '#F0E9D4';
+    var greencoach = '#69A864';
+    var bluecoach ='#3D8CFF';
+    var yellowcoach = '#FCD701';
+    var orangeleader= '#FFA503';
+    var redleader = '#DD143B';
+    var purpleleader= '#810181';
+    var coachColor  = "";
+    var rgb = "";
+    var contrastFontColor = "#212529";
+    var groupCP = Number.parseInt(sessionStorage.getItem("group_cp"));
+    var r = document.querySelector(':root');
+    switch (groupCP > 0) {
+        case groupCP >= 20:
+            coachColor = purpleleader;
+            rgb = 'rgb(129,1,129)';
+            contrastFontColor = '#fff';
+          break;
+        case groupCP >= 15:
+            coachColor = redleader;
+            rgb = 'rgb(221,20,59)';
+            contrastFontColor = '#fff';
+          break;
+        case  groupCP >= 10:
+            coachColor = orangeleader;
+            rgb = 'rgb(255,165,3)';
+          break;
+        case groupCP >= 6:
+            coachColor = yellowcoach;
+            rgb = 'rgb(252,215,1)';
+          break;
+        case groupCP >= 3:
+            coachColor = bluecoach;
+            rgb = 'rgb(61,140,255)';
+            contrastFontColor = '#fff';
+          break;
+        case groupCP >= 1:
+            coachColor = greencoach;
+            rgb = 'rgb(105,168,100)';
+          break;
+        default:
+            coachColor = defaultColor;
+            rgb = 'rgb(240,233,212)';
+      }
+    r.style.setProperty('--caochtheme', coachColor); 
+    setTimeout(function() {
+        $("table > thead > tr >th").css('background',rgb);
+        $("table > thead > tr >th .cbResultSetLabelLink").css('color' , contrastFontColor);
+        $('.home-section').css('background',rgb);
+        $('.home-section .text').css('color' , contrastFontColor);
+    },2000); // css applied for cp after 2 sec. 
+    
+     
 });
 
 function getUrlVars() {
@@ -299,73 +318,6 @@ function getUrlVars() {
 
     return vars;
 }
-
-
-/*function iboNavigation(activePage) {
-    var user = sessionStorage.getItem("userType");
-    var commType = sessionStorage.getItem("commType");
-
-    if (user == "ibo") {
-        $('#wqmenu').html('<li><a id="Dashboard" href="/WQCRM/ibo/ibodashboard.html"><i class="bx bx-grid-alt"></i><span class="link_name">Dashboard</span></a></li>\
-            <li><a id="Transactions" href="/WQCRM/ibo/coursesalesreport.html"><i class="bx bxs-badge-dollar"></i><span class="link_name">Transactions</span></a></li>\
-            <li><a id="Customers" href="/WQCRM/viewcustomers_wq.html"><i class="bx bx-group"></i><span class="link_name">Customers</span></a></li>\
-            <li><a id="Resources" href="/WQCRM/resourceList.html"><i class="bx bx-link"></i><span class="link_name">Resources</span></a></li>\
-            <li><a id="Social" href="/WQCRM/social/testimonial.html"><i class="bx bx-shape-polygon"></i><span class="link_name">Social</span></a></li>\
-            <li><a id="Profile" href="/WQCRM/iboprofileupdate.html"><i class="bx bx-user-pin"></i><span class="link_name">Profile</span></a></li>\
-            <li><a id="Logout" href="https://c0hcv782.caspio.com/folderlogout"><i class="bx bx-log-out"></i><span class="link_name">Logout</span></a></li>');
-    } else {
-
-        $('#wqmenu').html('<li><a id="Dashboard" href="/WQCRM/platinum/platinumdashboard.html"><i class="bx bx-grid-alt"></i><span class="link_name">Dashboard</span></a></li>\
-            <li><a id="Transactions" href="/WQCRM/platinum/coursesalesreportPlatinum.html"><i class="bx bxs-badge-dollar"></i><span class="link_name">Transactions</span></a></li>\
-            <li><a id="Customers" href="/WQCRM/viewcustomers_wq.html"><i class="bx bx-group"></i><span class="link_name">Customers</span></a></li>\
-            <li><a id="Resources" href="/WQCRM/resourceList.html"><i class="bx bx-link"></i><span class="link_name">Resources</span></a></li>\
-            <li><a id="Social" href="/WQCRM/social/testimonial.html"><i class="bx bx-shape-polygon"></i><span class="link_name">Social</span></a><i class="bx bxs-chevron-down arrow"></i></li>\
-            <li><a id="Profile" href="/WQCRM/iboprofileupdate.html"><i class="bx bx-user-pin"></i><span class="link_name">Profile</span></a></li>\
-            <li><a id="Leads" href="/WQCRM/leadmanagement/leadmanagement.html"><i class="bx bx-body"></i><span class="link_name">Leads</span></a></li>\
-            <li><a id="Logout" href="https://c0hcv782.caspio.com/folderlogout"><i class="bx bx-log-out"></i><span class="link_name">Logout</span></a></li>');
-
-    }
-    if (commType && commType != 'HWL') {
-        $('#Leads').hide(); // hide leads if  commType != HWL
-    }
-    if (activePage) {
-        $('#' + activePage).addClass('active');
-    }
-}*/
-
-/*function iboNavigation(activePage) {
-    var user = sessionStorage.getItem("userType");
-    if (user == "ibo") {
-        $('#wqmenu').html('<li><a id="Dashboard" href="ibo/ibodashboard.html"><i class="bx bx-grid-alt"></i><span class="link_name">Dashboard</span></a></li>\
-            <li><a id="Transactions" href="ibo/coursesalesreport.html"><i class="bx bxs-badge-dollar"></i><span class="link_name">Transactions</span></a></li>\
-            <li><a id="Customers" href="viewcustomers_wq.html"><i class="bx bx-group"></i><span class="link_name">Customers</span></a></li>\
-            <li><a id="Resources" href="resourceList.html"><i class="bx bx-link"></i><span class="link_name">Resources</span></a></li>\
-            <li><a id="Social" href="#"><i class="bx bx-shape-polygon"></i><span class="link_name">Social</span></a><i class="bx bxs-chevron-down arrow"></i>\
-            <ul class="sub-menu"><li><a href="social/testimonial.html">Submit Testimonial</a></li>\
-            <li><a href="social/mytestimonial.html">My Testimonial</a></li><li><a href="social/viewalltestimonial.html">View Testimonial</a></li>\
-            <li><a href="social/approvetestimonials.html">Approve Testimonial</a></li>\
-            </ul></li>\
-            <li><a id="Profile" href="iboprofileupdate.html"><i class="bx bx-user-pin"></i><span class="link_name">Profile</span></a></li>\
-            <li><a id="Logout" href="https://c0hcv782.caspio.com/folderlogout"><i class="bx bx-log-out"></i><span class="link_name">Logout</span></a></li>');
-    } else {
-
-        $('#wqmenu').html('<li><a id="Dashboard" href="/platinum/platinumdashboard.html"><i class="bx bx-grid-alt"></i><span class="link_name">Dashboard</span></a></li>\
-            <li><a id="Transactions" href="/platinum/coursesalesreportPlatinum.html"><i class="bx bxs-badge-dollar"></i><span class="link_name">Transactions</span></a></li>\
-            <li><a id="Customers" href="viewcustomers_wq.html"><i class="bx bx-group"></i><span class="link_name">Customers</span></a></li>\
-            <li><a id="Resources" href="resourceList.html"><i class="bx bx-link"></i><span class="link_name">Resources</span></a></li>\
-            <li><a id="Social" href="#"><i class="bx bx-shape-polygon"></i><span class="link_name">Social</span></a><i class="bx bxs-chevron-down arrow"></i>\
-            <ul class="sub-menu"><li><a href="/social/testimonial.html">Submit Testimonial</a></li>\
-            <li><a href="/social/mytestimonial.html">My Testimonial</a></li><li><a href="/social/viewalltestimonial.html">View Testimonial</a></li>\
-            <li><a href="/social/approvetestimonials.html">Approve Testimonial</a></li>\
-            </ul></li>\
-            <li><a id="Profile" href="iboprofileupdate.html"><i class="bx bx-user-pin"></i><span class="link_name">Profile</span></a></li>\
-            <li><a id="Logout" href="https://c0hcv782.caspio.com/folderlogout"><i class="bx bx-log-out"></i><span class="link_name">Logout</span></a></li>');
-
-    }
-    if (activePage) {
-        $('#' + activePage).addClass('active');
-    }
-}*/
 
 function copyWellness(event) {
     // Get the text field
@@ -378,115 +330,4 @@ function copyWellness(event) {
     // Copy the text inside the text field
     navigator.clipboard.writeText(copyText.value);
     event.value = "Copied";
-}
-
-function loginNavigationIBO(activePage) {
-    /* $('nav:not([aria-label="breadcrumb"])').html('<div class="container"> \
-    <a href="./index.html" id="siteTitle"><h5>Dashboard</h5></a> \
-    <ul id="portalNavbar"> \
-    <li><a href="./registration.html" id="registration"><i class="fas fa-users"></i> Registration</a></li> \
-    </ul> \
-    <button type="button" class="btn btn-sm navbar-toggler" id="navbarToggle"><span class="navbar-toggler-icon"></span></button>  \
-    </div> \
-    ');*/
-
-    if (activePage) {
-        $('#' + activePage).addClass('active');
-    }
-}
-
-function wqquestionnaireNavigation(activePage) {
-    $('nav:not([aria-label="breadcrumb"])').html('<div class="container"> \
-        <a href="#" id="siteTitle"><h5>Wellness Profile</h5></a> \
-        <ul id="portalNavbar"> \
-        <li><a href="#" id="registration"><i class="fas fa-users"></i> </a></li> \
-        </ul> \
-        <button type="button" class="btn btn-sm navbar-toggler" id="navbarToggle"><span class="navbar-toggler-icon"></span></button>  \
-        </div> \
-        ');
-
-    if (activePage) {
-        $('#' + activePage).addClass('active');
-    }
-}
-
-function weeklyfollowupNavigation(activePage) {
-    $('nav:not([aria-label="breadcrumb"])').html('<div class="container"> \
-        <a href="#" id="siteTitle"><h5>Weekly Followup</h5></a> \
-        <ul id="portalNavbar"> \
-        <li><a href="#" id="registration"><i class="fas fa-users"></i> </a></li> \
-        </ul> \
-        <button type="button" class="btn btn-sm navbar-toggler" id="navbarToggle"><span class="navbar-toggler-icon"></span></button>  \
-        </div> \
-        ');
-
-    if (activePage) {
-        $('#' + activePage).addClass('active');
-    }
-}
-
-function myFunction() {
-    var copyText = document.getElementById("myInput");
-    copyText.select();
-    copyText.setSelectionRange(0, 99999);
-    document.execCommand("copy");
-}
-
-function outFunc() {
-    var tooltip = document.getElementById("myTooltip");
-    tooltip.innerHTML = "Copy to clipboard";
-}
-
-function doctorNavigation(activePage) {
-    $('nav:not([aria-label="breadcrumb"])').html('<div class="container"> \
-        <a href="./index.html" id="siteTitle"><h5>Doctor Portal</h5></a> \
-        <ul id="portalNavbar"> \
-        <li><a href="./dashboard.html" id="dashboard"><i class="fas fa-chart-line"></i> Dashboard</a></li> \
-        <li><a href="./manage-patients.html" id="managePatients"><i class="fas fa-users"></i> Manage Patients</a></li> \
-        <li><a href="./profile.html" id="profile"><i class="fas fa-user"></i> Profile</a></li> \
-        <li><a href="https://c0hcv782.caspio.com/folderlogout"><i class="fas fa-sign-out-alt"></i> Logout</a></li> \
-        </ul> \
-        <button type="button" class="btn btn-sm navbar-toggler" id="navbarToggle"><span class="navbar-toggler-icon"></span></button>  \
-        </div> \
-        ');
-
-    if (activePage) {
-        $('#' + activePage).addClass('active');
-    }
-}
-
-var interval = setInterval(function() {
-    $('nav:not([aria-label="breadbrumb"]) #navbarToggle').on('click', function() {
-        if ($('ul#portalNavbar').hasClass('active')) {
-            $('ul#portalNavbar').removeClass('active');
-        } else {
-            $('ul#portalNavbar').addClass('active');
-        }
-    });
-    clearInterval(interval);
-}, 500);
-
-$(window).on('resize', function(e) {
-    $('ul#portalNavbar').removeClass('active');
-});
-
-$(document).ready(function() {
-    $('#testimoniesmenu').on('click', function() {
-        $('#testimoniesSubmenu').toggleClass('show');
-    });
-});
-
-function getUrlVars() {
-    var vars = [],
-        hash;
-    var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
-
-    for (var i = 0; i < hashes.length; i++) {
-        hash = hashes[i].split('=');
-        hash[1] = unescape(hash[1]);
-        vars.push(hash[0]);
-        vars[hash[0]] = hash[1];
-    }
-
-    return vars;
 }

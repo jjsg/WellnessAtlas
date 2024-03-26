@@ -261,8 +261,11 @@ $(document).ready(function() {
     var contrastFontColor = "#212529";
     var groupCP = Number.parseInt(sessionStorage.getItem("group_cp"));
     var r = document.querySelector(':root');
-    if(groupCP <= 0){
-              coachColor = defaultColor;
+    if(isNaN(groupCP)){
+        coachColor = defaultColor;
+        rgb = 'rgb(240,233,212)';
+    }else if(groupCP <= 0){
+               coachColor = defaultColor;
                 rgb = 'rgb(240,233,212)';
     }else{
         switch (groupCP > 0) {
